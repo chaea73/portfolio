@@ -20,7 +20,7 @@
   function setTheme(theme) {
     root.setAttribute('data-theme', theme);
     if (themeBtn) themeBtn.setAttribute('aria-label', theme === 'dark' ? '밝은 테마로 전환' : '어두운 테마로 전환');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f0f0e' : '#fbfaf9');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d1117' : '#f6f8fa');
   }
 
   themeBtn?.addEventListener('click', () => {
