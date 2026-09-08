@@ -1,23 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, 'Malgun Gothic', sans-serif">
   <rect width="800" height="500" fill="#f2f2f2"/>
-  <text x="300" y="290" fill="#111111" font-size="128" font-weight="800" text-anchor="middle" letter-spacing="4">TAP TAK</text>
-  <!-- 탭하는 손 (라인 아트) -->
-  <g transform="translate(560,150)" fill="none" stroke="#111111" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
-    <!-- 터치 버스트 -->
-    <g stroke-width="9">
-      <line x1="78" y1="-6" x2="78" y2="-40"/>
-      <line x1="40" y1="8" x2="18" y2="-18"/>
-      <line x1="116" y1="8" x2="138" y2="-18"/>
-      <line x1="18" y1="40" x2="-10" y2="30"/>
-      <line x1="138" y1="40" x2="166" y2="30"/>
+  <!-- 텍스트 + 손을 하나의 그룹으로 가운데 정렬 -->
+  <g>
+    <text x="230" y="278" fill="#111111" font-size="92" font-weight="800" text-anchor="middle" letter-spacing="2">TAP TAK</text>
+    <!-- 탭하는 손 (라인 아트) -->
+    <g transform="translate(470,150)" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 터치 버스트 -->
+      <g stroke-width="8">
+        <line x1="70" y1="-4" x2="70" y2="-36"/>
+        <line x1="34" y1="10" x2="14" y2="-14"/>
+        <line x1="106" y1="10" x2="126" y2="-14"/>
+        <line x1="14" y1="42" x2="-12" y2="34"/>
+        <line x1="126" y1="42" x2="152" y2="34"/>
+      </g>
+      <!-- 검지 -->
+      <path d="M70 46 v66" stroke-width="30"/>
+      <!-- 손등/주먹 -->
+      <path d="M44 118
+               q0 -20 20 -20 h12 q20 0 20 20
+               v4 q14 -12 27 0 q14 -10 26 4 q12 -6 20 8
+               v48 q0 42 -42 42 h-28 q-36 0 -50 -36 l-16 -36
+               q-8 -16 9 -24 q13 -6 22 8 z"/>
     </g>
-    <!-- 검지 -->
-    <path d="M78 44 v70" stroke-width="34"/>
-    <!-- 손등/주먹 -->
-    <path d="M50 120
-             q0 -22 22 -22 h12 q22 0 22 22
-             v6 q16 -14 30 0 q16 -12 28 4 q14 -8 22 8
-             v54 q0 46 -46 46 h-30 q-40 0 -56 -40 l-18 -40
-             q-8 -18 10 -26 q14 -6 24 8 z"/>
   </g>
 </svg>
