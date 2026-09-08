@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Malgun Gothic','Apple SD Gothic Neo','Pretendard',sans-serif">
+  <rect width="800" height="500" fill="#f4f5f8"/>
+  <!-- 창 -->
+  <rect x="90" y="70" width="620" height="360" rx="16" fill="#ffffff" stroke="#e2e5ec" stroke-width="2"/>
+  <!-- 헤더 바 -->
+  <path d="M90 86 a16 16 0 0 1 16 -16 h588 a16 16 0 0 1 16 16 v42 h-620 z" fill="#16305c"/>
+  <text x="118" y="114" fill="#ffffff" font-size="22" font-weight="700">KBO 경기 일정 뷰어</text>
+  <!-- 표 헤더 -->
+  <rect x="118" y="150" width="564" height="34" rx="6" fill="#eef1f7"/>
+  <g fill="#5a6480" font-size="15" font-weight="600">
+    <text x="150" y="172">날짜</text>
+    <text x="250" y="172">시간</text>
+    <text x="360" y="172">경기</text>
+    <text x="540" y="172">구장</text>
+  </g>
+  <!-- 표 행 -->
+  <g font-size="14" fill="#3a4056">
+    <g><text x="150" y="214">03.09</text><text x="250" y="214">18:30</text><text x="360" y="214">LG vs 두산</text><text x="540" y="214">잠실</text></g>
+    <line x1="118" y1="230" x2="682" y2="230" stroke="#eef1f7" stroke-width="1.5"/>
+    <g><text x="150" y="256">03.10</text><text x="250" y="256">14:00</text><text x="360" y="256">KIA vs 롯데</text><text x="540" y="256">광주</text></g>
+    <line x1="118" y1="272" x2="682" y2="272" stroke="#eef1f7" stroke-width="1.5"/>
+    <g><text x="150" y="298">03.11</text><text x="250" y="298">18:30</text><text x="360" y="298">SSG vs 삼성</text><text x="540" y="298">문학</text></g>
+    <line x1="118" y1="314" x2="682" y2="314" stroke="#eef1f7" stroke-width="1.5"/>
+    <g><text x="150" y="340">03.12</text><text x="250" y="340">17:00</text><text x="360" y="340">NC vs 키움</text><text x="540" y="340">창원</text></g>
+    <line x1="118" y1="356" x2="682" y2="356" stroke="#eef1f7" stroke-width="1.5"/>
+    <g><text x="150" y="382">03.13</text><text x="250" y="382">18:30</text><text x="360" y="382">한화 vs kt</text><text x="540" y="382">대전</text></g>
+  </g>
+  <!-- 야구공 -->
+  <g transform="translate(628,360)">
+    <circle r="46" fill="#ffffff" stroke="#d7dbe4" stroke-width="2"/>
+    <path d="M-30 -34 A46 46 0 0 0 -30 34" fill="none" stroke="#e2504a" stroke-width="3"/>
+    <path d="M30 -34 A46 46 0 0 1 30 34" fill="none" stroke="#e2504a" stroke-width="3"/>
+    <g stroke="#e2504a" stroke-width="2.2" stroke-linecap="round">
+      <path d="M-26 -22 l6 4 M-24 -12 l6 3 M-23 -1 l6 2 M-24 10 l6 3 M-26 21 l6 4"/>
+      <path d="M26 -22 l-6 4 M24 -12 l-6 3 M23 -1 l-6 2 M24 10 l-6 3 M26 21 l-6 4"/>
+    </g>
+  </g>
+</svg>
