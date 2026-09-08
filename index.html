@@ -273,36 +273,52 @@
       <p class="band__note">GitHub에 올린 결과물입니다</p>
     </header>
 
-    <!--
-      ✏️ 프로젝트를 추가하려면
-      1) 아래 <p class="empty"> … </p> 한 줄을 지우고
-      2) 그 자리에 <div class="works"> … </div> 블록의 주석을 풀어
-         제목 · 설명 · 태그 · 링크를 채우면 됩니다.
-    -->
-    <p class="empty fade">아직 공개한 프로젝트가 없습니다. 곧 채워나갈 예정입니다.</p>
-
-    <!--
     <div class="works">
 
+      <!-- ── 프로젝트 1 : pwn..helpme ── -->
       <article class="work fade">
+        <!-- 썸네일 이미지를 쓰려면: style="background-image:url('assets/img/pwnhelpme.png')" 를 넣으세요 -->
         <div class="work__thumb" data-no="01"></div>
         <div class="work__body">
-          <h3 class="work__title">프로젝트 이름</h3>
-          <p class="work__desc">무엇을 만들었는지, 어떤 문제를 풀었는지, 내가 맡은 역할이 무엇이었는지 두세 줄로 적어주세요.</p>
+          <h3 class="work__title">pwn..helpme</h3>
+          <p class="work__meta">Layer7 학기말 프로젝트 · 2인 팀 · 기획 &amp; 개발</p>
+          <p class="work__desc">
+            pwnable 문제 풀이에서 반복되는 익스플로잇 코드 작성을 자동화하는 보조 도구입니다.
+            ELF 바이너리를 분석해 보호기법(Canary·NX·PIE·RELRO)과 타깃·오프셋 정보를 정리하고,
+            그 결과로 pwntools 기반 익스플로잇 코드(ex.py)의 기본 골격을 자동 생성합니다.
+          </p>
           <ul class="chips">
-            <li>Python</li><li>개인 프로젝트</li>
+            <li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li>
           </ul>
           <div class="work__links">
-            <a href="https://github.com/chaea73/저장소이름" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+            <!-- ✏️ 실제 저장소 주소로 바꿔주세요 -->
+            <a href="https://github.com/chaea73/pwn-helpme" target="_blank" rel="noopener">GitHub<span>↗</span></a>
           </div>
         </div>
       </article>
 
-      썸네일 이미지를 쓰려면 assets/img/work1.png 를 넣고 아래처럼 바꾸세요.
-      <div class="work__thumb" style="background-image:url('assets/img/work1.png')"></div>
+      <!-- ── 프로젝트 2 : Safetymap ── -->
+      <article class="work fade">
+        <div class="work__thumb" data-no="02"></div>
+        <div class="work__body">
+          <h3 class="work__title">Safetymap</h3>
+          <p class="work__meta">창의아이디어 경진대회 출품작</p>
+          <!-- ✏️ Safetymap 설명을 채워주세요 (무엇을 하는 앱인지, 어떤 문제를 풀었는지) -->
+          <p class="work__desc">
+            창의아이디어 경진대회에 출품한 앱 프로젝트입니다.
+            (앱 소개와 맡은 역할을 이곳에 채워주세요.)
+          </p>
+          <ul class="chips">
+            <li>앱 기획</li><li>팀 프로젝트</li>
+          </ul>
+          <div class="work__links">
+            <!-- ✏️ 저장소가 있으면 주소를 넣고, 없으면 이 줄을 지우세요 -->
+            <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+          </div>
+        </div>
+      </article>
 
     </div>
-    -->
   </div>
 </section>
 
