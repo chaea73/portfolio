@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ✏️ 탭 제목 / 검색결과 설명 -->
+<title>박채아 — Portfolio</title>
+<meta name="description" content="선린인터넷고등학교 정보보호과 박채아의 포트폴리오입니다.">
+<meta name="author" content="박채아">
+<meta name="theme-color" content="#fbfaf9">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="박채아 — Portfolio">
+<meta property="og:description" content="선린인터넷고등학교 정보보호과 · Layer7 26기">
+<meta property="og:locale" content="ko_KR">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c75c37'/><text x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>%EB%B0%95</text></svg>">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<a href="#main" class="skip">본문 바로가기</a>
+
+<!-- ─────────────── 헤더 ─────────────── -->
+<header class="site-header" id="header">
+  <div class="shell header__row">
+    <a class="brand" href="#top">
+      박채아<span class="brand__dot"></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="주요 섹션">
+      <a href="#about">소개</a>
+      <a href="#profile">이력</a>
+      <a href="#work">프로젝트</a>
+      <a href="#contact">연락처</a>
+      <!-- 스킬·독서 섹션을 다시 켜면 아래 두 줄의 주석을 풀어주세요
+      <a href="#skills">스킬</a>
+      <a href="#reading">독서</a>
+      -->
+    </nav>
+
+    <div class="header__tools">
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="어두운 테마로 전환">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
+      </button>
+
+      <button class="iconbtn burger" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ─────────────── 히어로 ─────────────── -->
+<section class="hero" id="top">
+  <div class="shell hero__grid">
+
+    <div class="hero__copy">
+      <p class="kicker fade">Portfolio · 2026</p>
+
+      <!-- ✏️ 슬로건: 본인 문장으로 자유롭게 바꾸세요 -->
+      <h1 class="hero__title fade">
+        만드는 법과<br>
+        <span class="accent">지키는 법</span>을<br>
+        함께 배웁니다
+      </h1>
+
+      <!-- ✏️ 소개: 본인 이야기로 바꾸세요 -->
+      <p class="hero__lead fade">
+        선린인터넷고등학교 정보보호과에서 공부하고 있는 <em>박채아</em>입니다.
+        보안 동아리 Layer7 26기로 활동하며 배운 것들을
+        코드와 기록으로 남기고 있습니다.
+      </p>
+
+      <div class="hero__cta fade">
+        <a class="btn btn--solid" href="#work">프로젝트 보기</a>
+        <a class="btn btn--line" href="https://github.com/chaea73" target="_blank" rel="noopener">
+          <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero__card fade">
+      <div class="portrait">
+        <!-- ✏️ assets/img/profile.jpg 에 사진을 넣으면 자동 반영됩니다 -->
+        <img src="assets/img/profile.jpg" alt="박채아 프로필 사진" onerror="this.remove()">
+        <span class="portrait__ph" aria-hidden="true">박채아</span>
+      </div>
+
+      <dl class="meta">
+        <div><dt>이름</dt><dd>박채아</dd></div>
+        <div><dt>학교</dt><dd>선린인터넷고등학교</dd></div>
+        <div><dt>전공</dt><dd>정보보호과 1학년</dd></div>
+        <div><dt>메일</dt><dd><a href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a></dd></div>
+        <div><dt>연락처</dt><dd><a href="tel:01034534185">010-3453-4185</a></dd></div>
+      </dl>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ─────────────── 01 소개 ─────────────── -->
+<section class="band" id="about">
+  <div class="shell">
+    <header class="band__head fade">
+      <span class="band__num">01</span>
+      <h2 class="band__title">소개</h2>
+      <p class="band__note">지금 집중하고 있는 것</p>
+    </header>
+
+    <div class="about">
+      <!-- ✏️ 관심 분야 3가지 — 본인에 맞게 바꾸세요 -->
+      <ol class="ranks fade">
+        <li>
+          <span class="ranks__n">01</span>
+          <span class="ranks__name">정보보안 기초</span>
+          <span class="ranks__desc">네트워크 · 시스템 · 암호</span>
+        </li>
+        <li>
+          <span class="ranks__n">02</span>
+          <span class="ranks__name">Layer7 동아리</span>
+          <span class="ranks__desc">26기 · 스터디와 CTF</span>
+        </li>
+        <li>
+          <span class="ranks__n">03</span>
+          <span class="ranks__name">웹 개발</span>
+          <span class="ranks__desc">직접 만들어 보며 이해하기</span>
+        </li>
+      </ol>
+
+      <div class="about__text fade">
+        <!-- ✏️ 아래 세 문단을 본인 이야기로 바꿔주세요 -->
+        <p class="about__pull">“어떻게 동작하는지 알아야, 어떻게 지킬지도 알 수 있다고 생각합니다.”</p>
+        <p>
+          정보보호과에 들어와 보안을 배우기 시작했습니다.
+          공격과 방어를 함께 이해하려면 결국 시스템이 어떻게 만들어졌는지부터
+          알아야 한다는 걸 느끼고 있습니다.
+        </p>
+        <p>
+          그래서 배운 내용을 그냥 넘기지 않고 직접 만들어 보거나 정리해서 남기려고 합니다.
+          이 페이지는 그 기록을 모아두는 곳입니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── 02 이력 ─────────────── -->
+<section class="band band--tint" id="profile">
+  <div class="shell">
+    <header class="band__head fade">
+      <span class="band__num">02</span>
+      <h2 class="band__title">이력</h2>
+      <p class="band__note">학력 · 활동</p>
+    </header>
+
+    <div class="rows">
+
+      <div class="rows__group fade">
+        <h3 class="rows__label">학력</h3>
+        <ul class="rows__list">
+          <li>
+            <span class="rows__date">2026.03 —</span>
+            <span class="rows__main">선린인터넷고등학교 정보보호과</span>
+            <span class="rows__tail">재학 중 (1학년)</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rows__group fade">
+        <h3 class="rows__label">활동</h3>
+        <ul class="rows__list">
+          <li>
+            <span class="rows__date">2026 —</span>
+            <span class="rows__main">Layer7 26기</span>
+            <span class="rows__tail">교내 정보보안 동아리</span>
+          </li>
+        </ul>
+      </div>
+
+      <!--
+        ✏️ 자격증이 생기면 아래 주석을 풀고 내용을 채우세요.
+        <div class="rows__group fade">
+          <h3 class="rows__label">자격증</h3>
+          <ul class="rows__list">
+            <li>
+              <span class="rows__date">2027.05</span>
+              <span class="rows__main">자격증 이름</span>
+              <span class="rows__tail">발급 기관</span>
+            </li>
+          </ul>
+        </div>
+      -->
+
+      <!--
+        ✏️ 수상 내역이 생기면 아래 주석을 풀고 내용을 채우세요.
+        <div class="rows__group fade">
+          <h3 class="rows__label">수상</h3>
+          <ul class="rows__list">
+            <li>
+              <span class="rows__date">2027.04</span>
+              <span class="rows__main">대회 이름</span>
+              <span class="rows__tail">부문 · 등수</span>
+            </li>
+          </ul>
+        </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  03 스킬 (지금은 숨겨져 있습니다)
+
+  다룰 줄 아는 것이 생기면 아래 <section> 앞뒤의 주석 기호를 지우고,
+  헤더의 <a href="#skills">스킬</a> 주석도 함께 풀어주세요.
+  data-level: 3 = 상, 2 = 중, 1 = 하, 0 = 표시 안 함
+  ═══════════════════════════════════════════════════════════════
+
+<section class="band" id="skills">
+  <div class="shell">
+    <header class="band__head fade">
+      <span class="band__num">03</span>
+      <h2 class="band__title">스킬</h2>
+      <p class="band__note">숙련도는 세 단계(상 · 중 · 하)로 표시했습니다</p>
+    </header>
+
+    <div class="skills">
+      <section class="skills__col fade">
+        <h3 class="skills__label">언어</h3>
+        <ul class="skills__list">
+          <li data-level="2">Python</li>
+          <li data-level="1">C</li>
+        </ul>
+      </section>
+
+      <section class="skills__col fade">
+        <h3 class="skills__label">보안</h3>
+        <ul class="skills__list">
+          <li data-level="1">웹 해킹</li>
+          <li data-level="1">리버싱</li>
+        </ul>
+      </section>
+
+      <section class="skills__col fade">
+        <h3 class="skills__label">도구</h3>
+        <ul class="skills__list">
+          <li data-level="2">Git</li>
+          <li data-level="1">Linux</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ─────────────── 03 프로젝트 ─────────────── -->
+<section class="band band--tint" id="work">
+  <div class="shell">
+    <header class="band__head fade">
+      <span class="band__num">03</span>
+      <h2 class="band__title">프로젝트</h2>
+      <p class="band__note">GitHub에 올린 결과물입니다</p>
+    </header>
+
+    <!--
+      ✏️ 프로젝트를 추가하려면
+      1) 아래 <p class="empty"> … </p> 한 줄을 지우고
+      2) 그 자리에 <div class="works"> … </div> 블록의 주석을 풀어
+         제목 · 설명 · 태그 · 링크를 채우면 됩니다.
+    -->
+    <p class="empty fade">아직 공개한 프로젝트가 없습니다. 곧 채워나갈 예정입니다.</p>
+
+    <!--
+    <div class="works">
+
+      <article class="work fade">
+        <div class="work__thumb" data-no="01"></div>
+        <div class="work__body">
+          <h3 class="work__title">프로젝트 이름</h3>
+          <p class="work__desc">무엇을 만들었는지, 어떤 문제를 풀었는지, 내가 맡은 역할이 무엇이었는지 두세 줄로 적어주세요.</p>
+          <ul class="chips">
+            <li>Python</li><li>개인 프로젝트</li>
+          </ul>
+          <div class="work__links">
+            <a href="https://github.com/chaea73/저장소이름" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      썸네일 이미지를 쓰려면 assets/img/work1.png 를 넣고 아래처럼 바꾸세요.
+      <div class="work__thumb" style="background-image:url('assets/img/work1.png')"></div>
+
+    </div>
+    -->
+  </div>
+</section>
+
+<!--
+  ═══════════════════════════════════════════════════════════════
+  05 독서 활동 (지금은 숨겨져 있습니다)
+  기록이 쌓이면 아래 주석을 풀고, 헤더의 <a href="#reading">독서</a> 도 함께 풀어주세요.
+  ═══════════════════════════════════════════════════════════════
+
+<section class="band" id="reading">
+  <div class="shell">
+    <header class="band__head fade">
+      <span class="band__num">05</span>
+      <h2 class="band__title">독서 &amp; 학습 기록</h2>
+      <p class="band__note">학년별 기록</p>
+    </header>
+
+    <div class="acc">
+      <details class="acc__item fade" open>
+        <summary><span class="acc__tag">1학년</span> 기초를 다진 시간</summary>
+        <ul class="acc__body">
+          <li><strong>책 제목</strong><span>읽고 느낀 점을 한 줄로 적어주세요.</span></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ─────────────── 04 연락처 ─────────────── -->
+<section class="band band--end" id="contact">
+  <div class="shell cta">
+    <span class="band__num fade">04</span>
+    <h2 class="cta__title fade">함께 만들어갈 이야기를<br>기다리고 있습니다.</h2>
+
+    <a class="cta__mail fade" href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a>
+
+    <div class="cta__links fade">
+      <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+      <a href="tel:01034534185">010-3453-4185</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer__row">
+    <p>© <span id="year">2026</span> 박채아</p>
+    <a href="#top">맨 위로 ↑</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
