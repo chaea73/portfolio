@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 </head>
 
 <body>
@@ -107,6 +107,10 @@
           <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
           GitHub
         </a>
+        <a class="btn btn--line" href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">
+          <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M7 8l2.6 8L12.2 8" fill="none" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Velog
+        </a>
       </div>
     </div>
 
@@ -123,6 +127,7 @@
         <div><dt>전공</dt><dd>정보보호과 1학년</dd></div>
         <div><dt>메일</dt><dd><a href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a></dd></div>
         <div><dt>연락처</dt><dd><a href="tel:01034534185">010-3453-4185</a></dd></div>
+        <div><dt>블로그</dt><dd><a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">velog.io/@c7aea_</a></dd></div>
       </dl>
     </aside>
 
@@ -295,122 +300,92 @@
       <p class="band__note">GitHub에 올린 결과물입니다</p>
     </header>
 
-    <div class="works">
+    <ul class="repo">
 
-      <!-- ── 프로젝트 1 : pwn..helpme (대표작) ── -->
-      <article class="work work--featured fade">
-        <div class="work__media">
-          <div class="work__thumb" style="background-image:url('assets/img/pwn-helpme.svg')"></div>
-          <span class="work__cat">보안</span>
-          <span class="work__no">01</span>
-        </div>
-        <div class="work__body">
-          <h3 class="work__title">pwn..helpme</h3>
-          <p class="work__meta">Layer7 학기말 프로젝트 · 2인 팀 · 기획 &amp; 개발</p>
-          <p class="work__desc">
-            pwnable 문제 풀이에서 반복되는 익스플로잇 코드 작성을 자동화하는 보조 도구입니다.
-            사용자가 분석한 오프셋만 입력하면 pwntools 기반 익스플로잇 골격을 자동으로 만들어
-            문제 풀이 시간을 줄여 줍니다.
-          </p>
-          <ul class="work__points">
-            <li>ELF 헤더를 직접 파싱해 보호기법(Canary·NX·PIE·RELRO)을 자동 판별</li>
-            <li>타깃 심볼·오프셋을 찾아 <code>ex.py</code> 익스플로잇 코드를 자동 생성</li>
-            <li>외부 라이브러리 없이 순수 Python으로 바이너리 구조 분석 구현</li>
-          </ul>
-          <ul class="chips">
-            <li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li>
-          </ul>
-          <div class="work__links">
-            <a href="https://github.com/chaea73/portfolio/tree/main/projects/pwn-helpme" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-            <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">코드 보기<span>↗</span></a>
+      <!-- ── 프로젝트 1 : pwn..helpme ── -->
+      <li class="repo__item fade">
+        <span class="repo__icon" style="background-image:url('assets/img/pwn-helpme.svg')"></span>
+        <div class="repo__body">
+          <div class="repo__top">
+            <h3 class="repo__name">pwn..helpme</h3>
+            <span class="repo__cat">보안</span>
+            <span class="repo__meta">Layer7 · 2인 · 기획 &amp; 개발</span>
           </div>
+          <p class="repo__desc">
+            ELF 바이너리를 분석해 보호기법(Canary·NX·PIE·RELRO)과 오프셋을 정리하고,
+            pwntools 기반 익스플로잇 코드(<code>ex.py</code>) 골격을 자동 생성하는 보조 도구.
+          </p>
+          <ul class="repo__tags"><li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li></ul>
         </div>
-      </article>
+        <div class="repo__actions">
+          <a href="https://github.com/chaea73/portfolio/tree/main/projects/pwn-helpme" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+          <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">코드<span>↗</span></a>
+        </div>
+      </li>
 
       <!-- ── 프로젝트 2 : Safe Way Map ── -->
-      <article class="work fade">
-        <div class="work__media">
-          <div class="work__thumb" style="background-image:url('assets/img/safewaymap.svg')"></div>
-          <span class="work__cat">앱 · AI</span>
-          <span class="work__no">02</span>
-        </div>
-        <div class="work__body">
-          <h3 class="work__title">Safe Way Map</h3>
-          <p class="work__meta">창의아이디어 경진대회 · 2인 팀 · LLM 기능 개발 &amp; 발표</p>
-          <p class="work__desc">
-            공공데이터(경찰서·가로등 위치)와 시민 참여 평가를 활용한 <em>안심 경로 추천</em> 앱입니다.
-            CCTV·경찰서·가로등 데이터와 사용자 평가를 LLM이 분석해 목적지까지 가장 안전한 길을 안내합니다.
-          </p>
-          <ul class="work__points">
-            <li>LLM 기반 골목·도로 위험도 분석 기능 개발</li>
-            <li>기획 발표 담당</li>
-          </ul>
-          <ul class="chips">
-            <li>Android Studio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li>
-          </ul>
-          <div class="work__links">
-            <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+      <li class="repo__item fade">
+        <span class="repo__icon" style="background-image:url('assets/img/safewaymap.svg')"></span>
+        <div class="repo__body">
+          <div class="repo__top">
+            <h3 class="repo__name">Safe Way Map</h3>
+            <span class="repo__cat">앱 · AI</span>
+            <span class="repo__meta">창의아이디어 경진대회 · 2인 · LLM 개발 &amp; 발표</span>
           </div>
+          <p class="repo__desc">
+            공공데이터(경찰서·가로등)와 시민 참여 평가를 LLM이 분석해 목적지까지
+            가장 안전한 길을 안내하는 안심 경로 추천 앱. LLM 위험도 분석 기능 개발과 발표 담당.
+          </p>
+          <ul class="repo__tags"><li>Android Studio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li></ul>
         </div>
-      </article>
+        <div class="repo__actions">
+          <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+        </div>
+      </li>
 
       <!-- ── 프로젝트 3 : KBO 경기 일정 뷰어 ── -->
-      <article class="work fade">
-        <div class="work__media">
-          <div class="work__thumb" style="background-image:url('assets/img/kbo-schedule.svg')"></div>
-          <span class="work__cat">데이터</span>
-          <span class="work__no">03</span>
-        </div>
-        <div class="work__body">
-          <h3 class="work__title">KBO 경기 일정 뷰어</h3>
-          <p class="work__meta">개인 프로젝트 · Python</p>
-          <p class="work__desc">
-            KBO 공식 홈페이지의 월별 경기 일정을 크롤링해 저장하고, GUI로 불러와
-            원하는 조건으로 걸러 볼 수 있는 데스크톱 앱입니다.
-          </p>
-          <ul class="work__points">
-            <li>Selenium·BeautifulSoup으로 일정 크롤링 → JSON 저장</li>
-            <li>tkinter 표 UI에서 날짜·상대·구장·우천취소 필터링</li>
-          </ul>
-          <ul class="chips">
-            <li>Python</li><li>tkinter</li><li>pandas</li><li>Selenium</li><li>BeautifulSoup</li>
-          </ul>
-          <div class="work__links">
-            <a href="https://github.com/chaea73/portfolio/tree/main/projects/kbo-schedule" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-            <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">코드 보기<span>↗</span></a>
+      <li class="repo__item fade">
+        <span class="repo__icon" style="background-image:url('assets/img/kbo-schedule.svg')"></span>
+        <div class="repo__body">
+          <div class="repo__top">
+            <h3 class="repo__name">KBO 경기 일정 뷰어</h3>
+            <span class="repo__cat">데이터</span>
+            <span class="repo__meta">개인 프로젝트</span>
           </div>
+          <p class="repo__desc">
+            KBO 공식 홈페이지의 월별 경기 일정을 Selenium·BeautifulSoup으로 크롤링해 JSON으로 저장하고,
+            tkinter GUI에서 날짜·상대·구장·우천취소 조건으로 필터링해 보는 데스크톱 앱.
+          </p>
+          <ul class="repo__tags"><li>Python</li><li>tkinter</li><li>pandas</li><li>Selenium</li><li>BeautifulSoup</li></ul>
         </div>
-      </article>
+        <div class="repo__actions">
+          <a href="https://github.com/chaea73/portfolio/tree/main/projects/kbo-schedule" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+          <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">코드<span>↗</span></a>
+        </div>
+      </li>
 
       <!-- ── 프로젝트 4 : TAP TAK ── -->
-      <article class="work fade">
-        <div class="work__media">
-          <div class="work__thumb" style="background-image:url('assets/img/taptak.svg')"></div>
-          <span class="work__cat">접근성</span>
-          <span class="work__no">04</span>
-        </div>
-        <div class="work__body">
-          <h3 class="work__title">TAP TAK</h3>
-          <p class="work__meta">앱솔루트 팀 · 3인 · 기획 &amp; 발표</p>
-          <p class="work__desc">
-            디지털 소외 계층도 쉽게 쓸 수 있도록 만든 접근성 앱입니다.
-            ‘탭하면 탁’이라는 이름처럼 크고 단순한 UI로 누구나 쉽게 쓸 수 있게 설계했습니다.
-          </p>
-          <ul class="work__points">
-            <li><em>간단통화</em> · <em>셀프계산대</em> · <em>지도</em> 세 기능 구성</li>
-            <li>앱인벤터로 제작 · 기획과 발표 담당</li>
-          </ul>
-          <ul class="chips">
-            <li>App Inventor</li><li>블록 코딩</li><li>접근성</li>
-          </ul>
-          <div class="work__links">
-            <a href="https://github.com/chaea73/portfolio/tree/main/projects/taptak" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-            <a href="https://github.com/chaea73/portfolio/blob/main/projects/taptak/TapTak.aia" target="_blank" rel="noopener">.aia 파일<span>↗</span></a>
+      <li class="repo__item fade">
+        <span class="repo__icon" style="background-image:url('assets/img/taptak.svg')"></span>
+        <div class="repo__body">
+          <div class="repo__top">
+            <h3 class="repo__name">TAP TAK</h3>
+            <span class="repo__cat">접근성</span>
+            <span class="repo__meta">앱솔루트 팀 · 3인 · 기획 &amp; 발표</span>
           </div>
+          <p class="repo__desc">
+            디지털 소외 계층도 쉽게 쓸 수 있도록 만든 접근성 앱. 간단통화·셀프계산대·지도
+            세 기능을 크고 단순한 UI로 담았고, 앱인벤터로 제작. 기획과 발표 담당.
+          </p>
+          <ul class="repo__tags"><li>App Inventor</li><li>블록 코딩</li><li>접근성</li></ul>
         </div>
-      </article>
+        <div class="repo__actions">
+          <a href="https://github.com/chaea73/portfolio/tree/main/projects/taptak" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+          <a href="https://github.com/chaea73/portfolio/blob/main/projects/taptak/TapTak.aia" target="_blank" rel="noopener">.aia<span>↗</span></a>
+        </div>
+      </li>
 
-    </div>
+    </ul>
   </div>
 </section>
 
@@ -520,6 +495,7 @@
 
     <div class="cta__links fade">
       <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
+      <a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">Velog<span>↗</span></a>
       <a href="tel:01034534185">010-3453-4185</a>
     </div>
   </div>
@@ -534,6 +510,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=7"></script>
 </body>
 </html>
