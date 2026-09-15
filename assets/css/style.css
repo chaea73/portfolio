@@ -387,6 +387,19 @@ body.no-scroll { overflow: hidden; }
 .spage[data-bg="5"] { background: linear-gradient(150deg,#0f2027,#203a43 50%,#2c5364); }
 .spage[data-bg="6"] { background: linear-gradient(150deg,#654ea3,#eaafc8); }
 
+/* 활동지 실제 사진 스토리 */
+.spage--img {
+  padding: 0; justify-content: flex-end;
+  background-color: #0e0e12;
+  background-size: contain; background-position: center; background-repeat: no-repeat;
+}
+.spage__cap {
+  width: 100%; padding: 40px 22px 30px; text-align: center;
+  background: linear-gradient(transparent, rgba(0,0,0,.85) 55%);
+}
+.spage--img .spage__no { position: static; display: block; margin-bottom: 6px; font-size: .78rem; color: rgba(255,255,255,.85); }
+.spage__cap b { font-size: 1.05rem; font-weight: 700; color: #fff; }
+
 @media (max-width: 640px) {
   .sv__stage { width: 100vw; height: 100dvh; height: 100vh; border-radius: 0; }
   .sv__top { width: 100vw; }
