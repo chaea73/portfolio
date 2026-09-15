@@ -1,509 +1,329 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="dark">
+<html lang="ko" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- ✏️ 탭 제목 / 검색결과 설명 -->
-<title>박채아 — Portfolio</title>
-<meta name="description" content="선린인터넷고등학교 정보보호과 박채아의 포트폴리오입니다.">
+<title>박채아 · @c7aea_ — Portfolio</title>
+<meta name="description" content="선린인터넷고등학교 정보보호과 박채아의 포트폴리오. 인스타그램 피드처럼 둘러보는 프로젝트 모음.">
 <meta name="author" content="박채아">
-<meta name="theme-color" content="#0d1117">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="박채아 — Portfolio">
-<meta property="og:description" content="선린인터넷고등학교 정보보호과 · Layer7 26기">
+<meta property="og:title" content="박채아 · @c7aea_ — Portfolio">
+<meta property="og:description" content="정보보호과 · Layer7 26기 · 프로젝트 피드">
 <meta property="og:locale" content="ko_KR">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c75c37'/><text x='16' y='22' font-size='16' font-family='sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>%EB%B0%95</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='%23f09433'/><stop offset='.5' stop-color='%23dc2743'/><stop offset='1' stop-color='%23bc1888'/></linearGradient></defs><rect width='32' height='32' rx='9' fill='url(%23g)'/><text x='16' y='22' font-size='15' font-family='sans-serif' font-weight='800' fill='%23fff' text-anchor='middle'>%EB%B0%95</text></svg>">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
 </head>
 
 <body>
-<a href="#main" class="skip">본문 바로가기</a>
+<a href="#feed" class="skip">본문 바로가기</a>
 
-<!-- ─────────────── 헤더 ─────────────── -->
-<header class="site-header" id="header">
-  <div class="shell header__row">
-    <a class="brand" href="#top">
-      박채아<span class="brand__dot"></span>
-    </a>
-
-    <nav class="nav" id="nav" aria-label="주요 섹션">
-      <a href="#about">소개</a>
-      <a href="#profile">이력</a>
-      <a href="#work">프로젝트</a>
-      <a href="#worksheets">학습지</a>
-      <a href="#contact">연락처</a>
-      <!-- 스킬·독서 섹션을 다시 켜면 아래 두 줄의 주석을 풀어주세요
-      <a href="#skills">스킬</a>
-      <a href="#reading">독서</a>
-      -->
-    </nav>
-
-    <div class="header__tools">
+<!-- ─────────────── 상단바 ─────────────── -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <a href="#top" class="logo">Portfoliogram</a>
+    <div class="topbar__right">
+      <span class="topbar__handle">@c7aea_</span>
       <button class="iconbtn" id="themeBtn" type="button" aria-label="어두운 테마로 전환">
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
-      </button>
-
-      <button class="iconbtn burger" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
-<main id="main">
+<main id="top">
 
-<!-- ─────────────── 히어로 ─────────────── -->
-<section class="hero" id="top">
-
-  <!-- 배경 장식: 떠다니는 코드 기호 (장식용) -->
-  <div class="hero__deco" aria-hidden="true">
-    <span class="glyph g1">&lt;/&gt;</span>
-    <span class="glyph g2">{ }</span>
-    <span class="glyph g3">;</span>
-    <span class="glyph g4">01</span>
-    <span class="glyph g5">#!</span>
-    <span class="glyph g6">~$</span>
-    <span class="glyph g7">( )</span>
-    <span class="glyph g8">[ ]</span>
-    <span class="glyph g9">=&gt;</span>
-    <span class="glyph g10">*</span>
-    <svg class="deco-svg deco-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.2 6.4L21 9l-5 4.2L17.8 20 12 16.4 6.2 20 8 13.2 3 9l6.8-.6z"/></svg>
-    <svg class="deco-svg deco-plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>
-    <svg class="deco-svg deco-ring" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
-  </div>
-
-  <div class="shell hero__grid">
-
-    <div class="hero__copy">
-      <p class="kicker fade">Portfolio · 2026</p>
-
-      <!-- ✏️ 슬로건: 본인 문장으로 자유롭게 바꾸세요 -->
-      <h1 class="hero__title fade">
-        만드는 법과<br>
-        <span class="accent">지키는 법</span>을<br>
-        함께 배웁니다
-      </h1>
-
-      <!-- ✏️ 소개: 본인 이야기로 바꾸세요 -->
-      <p class="hero__lead fade">
-        선린인터넷고등학교 정보보호과에서 공부하고 있는 <em>박채아</em>입니다.
-        보안 동아리 Layer7 26기로 활동하며 배운 것들을
-        코드와 기록으로 남기고 있습니다.
-      </p>
-
-      <div class="hero__cta fade">
-        <a class="btn btn--solid" href="#work">프로젝트 보기</a>
-        <a class="btn btn--line" href="https://github.com/chaea73" target="_blank" rel="noopener">
-          <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-          GitHub
-        </a>
-        <a class="btn btn--line" href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">
-          <svg class="btn__i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M7 8l2.6 8L12.2 8" fill="none" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Velog
-        </a>
-      </div>
+  <!-- ─────────────── 프로필 헤더 ─────────────── -->
+  <section class="profile">
+    <div class="profile__avatar">
+      <span class="profile__ring">
+        <span class="profile__pic">박채아</span>
+      </span>
     </div>
 
-    <aside class="hero__card fade">
-      <dl class="meta">
-        <div><dt>이름</dt><dd>박채아</dd></div>
-        <div><dt>학교</dt><dd>선린인터넷고등학교</dd></div>
-        <div><dt>전공</dt><dd>정보보호과 1학년</dd></div>
-        <div><dt>메일</dt><dd><a href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a></dd></div>
-        <div><dt>연락처</dt><dd><a href="tel:01034534185">010-3453-4185</a></dd></div>
-        <div><dt>블로그</dt><dd><a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">velog.io/@c7aea_</a></dd></div>
-      </dl>
-    </aside>
-
-  </div>
-</section>
-
-<!-- ─────────────── 01 소개 ─────────────── -->
-<section class="band" id="about">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">01</span>
-      <h2 class="band__title">소개</h2>
-      <p class="band__note">지금 집중하고 있는 것</p>
-    </header>
-
-    <div class="about">
-      <!-- ✏️ 관심 분야 3가지 — 본인에 맞게 바꾸세요 -->
-      <ol class="ranks fade">
-        <li>
-          <span class="ranks__n">01</span>
-          <span class="ranks__name">정보보안 기초</span>
-          <span class="ranks__desc">네트워크 · 시스템 · 암호</span>
-        </li>
-        <li>
-          <span class="ranks__n">02</span>
-          <span class="ranks__name">Layer7 동아리</span>
-          <span class="ranks__desc">26기 · 스터디와 CTF</span>
-        </li>
-        <li>
-          <span class="ranks__n">03</span>
-          <span class="ranks__name">웹 개발</span>
-          <span class="ranks__desc">직접 만들어 보며 이해하기</span>
-        </li>
-      </ol>
-
-      <div class="about__text fade">
-        <!-- ✏️ 아래 세 문단을 본인 이야기로 바꿔주세요 -->
-        <p class="about__pull">“어떻게 동작하는지 알아야, 어떻게 지킬지도 알 수 있다고 생각합니다.”</p>
-        <p>
-          정보보호과에 들어와 보안을 배우기 시작했습니다.
-          공격과 방어를 함께 이해하려면 결국 시스템이 어떻게 만들어졌는지부터
-          알아야 한다는 걸 느끼고 있습니다.
-        </p>
-        <p>
-          그래서 배운 내용을 그냥 넘기지 않고 직접 만들어 보거나 정리해서 남기려고 합니다.
-          이 페이지는 그 기록을 모아두는 곳입니다.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────────── 02 이력 ─────────────── -->
-<section class="band band--tint" id="profile">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">02</span>
-      <h2 class="band__title">이력</h2>
-      <p class="band__note">학력 · 활동</p>
-    </header>
-
-    <div class="rows">
-
-      <div class="rows__group fade">
-        <h3 class="rows__label">학력</h3>
-        <ul class="rows__list">
-          <li>
-            <span class="rows__date">2026.03 —</span>
-            <span class="rows__main">선린인터넷고등학교 정보보호과</span>
-            <span class="rows__tail">재학 중 (1학년)</span>
-          </li>
-        </ul>
+    <div class="profile__main">
+      <div class="profile__line">
+        <h1 class="profile__handle">c7aea_</h1>
+        <div class="profile__actions">
+          <a class="ig-btn ig-btn--primary" href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub</a>
+          <a class="ig-btn" href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">Velog</a>
+          <a class="ig-btn" href="mailto:qkr.chaea73@gmail.com" aria-label="이메일 보내기">메시지</a>
+        </div>
       </div>
 
-      <div class="rows__group fade">
-        <h3 class="rows__label">활동</h3>
-        <ul class="rows__list">
-          <li>
-            <span class="rows__date">2026 —</span>
-            <span class="rows__main">Layer7 26기</span>
-            <span class="rows__tail">교내 정보보안 동아리</span>
-          </li>
-        </ul>
+      <ul class="profile__stats">
+        <li><b>4</b> 프로젝트</li>
+        <li><b>7</b> 학습지</li>
+        <li><b>Layer7</b> 26기</li>
+      </ul>
+
+      <div class="profile__bio">
+        <p class="bio__name">박채아 <span class="bio__badge">정보보호과</span></p>
+        <p>선린인터넷고등학교 정보보호과 1학년</p>
+        <p>🔐 보안 동아리 Layer7 26기 · 개발 &amp; 보안 학습 중</p>
+        <p class="bio__quote">“만드는 법과 지키는 법을 함께 배웁니다”</p>
+        <p><a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">🔗 velog.io/@c7aea_</a></p>
       </div>
-
-      <!--
-        ✏️ 자격증이 생기면 아래 주석을 풀고 내용을 채우세요.
-        <div class="rows__group fade">
-          <h3 class="rows__label">자격증</h3>
-          <ul class="rows__list">
-            <li>
-              <span class="rows__date">2027.05</span>
-              <span class="rows__main">자격증 이름</span>
-              <span class="rows__tail">발급 기관</span>
-            </li>
-          </ul>
-        </div>
-      -->
-
-      <!--
-        ✏️ 수상 내역이 생기면 아래 주석을 풀고 내용을 채우세요.
-        <div class="rows__group fade">
-          <h3 class="rows__label">수상</h3>
-          <ul class="rows__list">
-            <li>
-              <span class="rows__date">2027.04</span>
-              <span class="rows__main">대회 이름</span>
-              <span class="rows__tail">부문 · 등수</span>
-            </li>
-          </ul>
-        </div>
-      -->
-
     </div>
+  </section>
+
+  <!-- ─────────────── 스토리 하이라이트 ─────────────── -->
+  <nav class="highlights" aria-label="소개 하이라이트">
+    <button class="hl" type="button" data-post="about">
+      <span class="hl__ring"><span class="hl__emoji">👋</span></span>
+      <span class="hl__label">소개</span>
+    </button>
+    <button class="hl" type="button" data-post="career">
+      <span class="hl__ring"><span class="hl__emoji">🎓</span></span>
+      <span class="hl__label">이력</span>
+    </button>
+    <button class="hl" type="button" data-post="skills">
+      <span class="hl__ring"><span class="hl__emoji">🧩</span></span>
+      <span class="hl__label">관심분야</span>
+    </button>
+    <button class="hl" type="button" data-post="sheets">
+      <span class="hl__ring"><span class="hl__emoji">📚</span></span>
+      <span class="hl__label">진로학습</span>
+    </button>
+    <button class="hl" type="button" data-post="contact">
+      <span class="hl__ring"><span class="hl__emoji">✉️</span></span>
+      <span class="hl__label">연락처</span>
+    </button>
+  </nav>
+
+  <!-- ─────────────── 탭바 ─────────────── -->
+  <div class="tabbar" id="feed">
+    <span class="tab is-active">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      게시물
+    </span>
+    <span class="tab__hint">타일을 누르면 프로젝트 상세가 열립니다</span>
   </div>
-</section>
 
-<!--
-  ═══════════════════════════════════════════════════════════════
-  03 스킬 (지금은 숨겨져 있습니다)
+  <!-- ─────────────── 피드 그리드 ─────────────── -->
+  <section class="grid" aria-label="프로젝트 목록">
 
-  다룰 줄 아는 것이 생기면 아래 <section> 앞뒤의 주석 기호를 지우고,
-  헤더의 <a href="#skills">스킬</a> 주석도 함께 풀어주세요.
-  data-level: 3 = 상, 2 = 중, 1 = 하, 0 = 표시 안 함
-  ═══════════════════════════════════════════════════════════════
+    <button class="tile" type="button" data-post="pwn" style="--img:url('assets/img/pwn-helpme.svg')">
+      <span class="tile__cat">보안</span>
+      <span class="tile__hover">
+        <span class="tile__title">pwn..helpme</span>
+        <span class="tile__stat">♥ 128 &nbsp; 💬 16</span>
+      </span>
+    </button>
 
-<section class="band" id="skills">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">03</span>
-      <h2 class="band__title">스킬</h2>
-      <p class="band__note">숙련도는 세 단계(상 · 중 · 하)로 표시했습니다</p>
-    </header>
+    <button class="tile" type="button" data-post="safeway" style="--img:url('assets/img/safewaymap.svg')">
+      <span class="tile__cat">앱 · AI</span>
+      <span class="tile__hover">
+        <span class="tile__title">Safe Way Map</span>
+        <span class="tile__stat">♥ 96 &nbsp; 💬 11</span>
+      </span>
+    </button>
 
-    <div class="skills">
-      <section class="skills__col fade">
-        <h3 class="skills__label">언어</h3>
-        <ul class="skills__list">
-          <li data-level="2">Python</li>
-          <li data-level="1">C</li>
-        </ul>
-      </section>
+    <button class="tile" type="button" data-post="kbo" style="--img:url('assets/img/kbo-schedule.svg')">
+      <span class="tile__cat">데이터</span>
+      <span class="tile__hover">
+        <span class="tile__title">KBO 경기 일정 뷰어</span>
+        <span class="tile__stat">♥ 74 &nbsp; 💬 9</span>
+      </span>
+    </button>
 
-      <section class="skills__col fade">
-        <h3 class="skills__label">보안</h3>
-        <ul class="skills__list">
-          <li data-level="1">웹 해킹</li>
-          <li data-level="1">리버싱</li>
-        </ul>
-      </section>
+    <button class="tile" type="button" data-post="taptak" style="--img:url('assets/img/taptak.svg')">
+      <span class="tile__cat">접근성</span>
+      <span class="tile__hover">
+        <span class="tile__title">TAP TAK</span>
+        <span class="tile__stat">♥ 88 &nbsp; 💬 13</span>
+      </span>
+    </button>
 
-      <section class="skills__col fade">
-        <h3 class="skills__label">도구</h3>
-        <ul class="skills__list">
-          <li data-level="2">Git</li>
-          <li data-level="1">Linux</li>
-        </ul>
-      </section>
-    </div>
-  </div>
-</section>
--->
+  </section>
 
-<!-- ─────────────── 03 프로젝트 ─────────────── -->
-<section class="band band--tint" id="work">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">03</span>
-      <h2 class="band__title">프로젝트</h2>
-      <p class="band__note">GitHub에 올린 결과물입니다</p>
-    </header>
-
-    <ul class="repo">
-
-      <!-- ── 프로젝트 1 : pwn..helpme ── -->
-      <li class="repo__item fade">
-        <span class="repo__icon" style="background-image:url('assets/img/pwn-helpme.svg')"></span>
-        <div class="repo__body">
-          <div class="repo__top">
-            <h3 class="repo__name">pwn..helpme</h3>
-            <span class="repo__cat">보안</span>
-            <span class="repo__meta">Layer7 · 2인 · 기획 &amp; 개발</span>
-          </div>
-          <p class="repo__desc">
-            ELF 바이너리를 분석해 보호기법(Canary·NX·PIE·RELRO)과 오프셋을 정리하고,
-            pwntools 기반 익스플로잇 코드(<code>ex.py</code>) 골격을 자동 생성하는 보조 도구.
-          </p>
-          <ul class="repo__tags"><li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li></ul>
-        </div>
-        <div class="repo__actions">
-          <a href="https://github.com/chaea73/portfolio/tree/main/projects/pwn-helpme" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-          <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">코드<span>↗</span></a>
-        </div>
-      </li>
-
-      <!-- ── 프로젝트 2 : Safe Way Map ── -->
-      <li class="repo__item fade">
-        <span class="repo__icon" style="background-image:url('assets/img/safewaymap.svg')"></span>
-        <div class="repo__body">
-          <div class="repo__top">
-            <h3 class="repo__name">Safe Way Map</h3>
-            <span class="repo__cat">앱 · AI</span>
-            <span class="repo__meta">창의아이디어 경진대회 · 2인 · LLM 개발 &amp; 발표</span>
-          </div>
-          <p class="repo__desc">
-            공공데이터(경찰서·가로등)와 시민 참여 평가를 LLM이 분석해 목적지까지
-            가장 안전한 길을 안내하는 안심 경로 추천 앱. LLM 위험도 분석 기능 개발과 발표 담당.
-          </p>
-          <ul class="repo__tags"><li>Android Studio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li></ul>
-        </div>
-        <div class="repo__actions">
-          <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-        </div>
-      </li>
-
-      <!-- ── 프로젝트 3 : KBO 경기 일정 뷰어 ── -->
-      <li class="repo__item fade">
-        <span class="repo__icon" style="background-image:url('assets/img/kbo-schedule.svg')"></span>
-        <div class="repo__body">
-          <div class="repo__top">
-            <h3 class="repo__name">KBO 경기 일정 뷰어</h3>
-            <span class="repo__cat">데이터</span>
-            <span class="repo__meta">개인 프로젝트</span>
-          </div>
-          <p class="repo__desc">
-            KBO 공식 홈페이지의 월별 경기 일정을 Selenium·BeautifulSoup으로 크롤링해 JSON으로 저장하고,
-            tkinter GUI에서 날짜·상대·구장·우천취소 조건으로 필터링해 보는 데스크톱 앱.
-          </p>
-          <ul class="repo__tags"><li>Python</li><li>tkinter</li><li>pandas</li><li>Selenium</li><li>BeautifulSoup</li></ul>
-        </div>
-        <div class="repo__actions">
-          <a href="https://github.com/chaea73/portfolio/tree/main/projects/kbo-schedule" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-          <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">코드<span>↗</span></a>
-        </div>
-      </li>
-
-      <!-- ── 프로젝트 4 : TAP TAK ── -->
-      <li class="repo__item fade">
-        <span class="repo__icon" style="background-image:url('assets/img/taptak.svg')"></span>
-        <div class="repo__body">
-          <div class="repo__top">
-            <h3 class="repo__name">TAP TAK</h3>
-            <span class="repo__cat">접근성</span>
-            <span class="repo__meta">앱솔루트 팀 · 3인 · 기획 &amp; 발표</span>
-          </div>
-          <p class="repo__desc">
-            디지털 소외 계층도 쉽게 쓸 수 있도록 만든 접근성 앱. 간단통화·셀프계산대·지도
-            세 기능을 크고 단순한 UI로 담았고, 앱인벤터로 제작. 기획과 발표 담당.
-          </p>
-          <ul class="repo__tags"><li>App Inventor</li><li>블록 코딩</li><li>접근성</li></ul>
-        </div>
-        <div class="repo__actions">
-          <a href="https://github.com/chaea73/portfolio/tree/main/projects/taptak" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-          <a href="https://github.com/chaea73/portfolio/blob/main/projects/taptak/TapTak.aia" target="_blank" rel="noopener">.aia<span>↗</span></a>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</section>
-
-<!-- ─────────────── 04 진로 학습지 ─────────────── -->
-<section class="band" id="worksheets">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">04</span>
-      <h2 class="band__title">진로 학습지</h2>
-      <p class="band__note">‘무엘쌤과 함께하는 진로여행’ 진로수업 활동 기록</p>
-    </header>
-
-    <!-- ✏️ 항목을 추가/수정하려면 <li class="sheet"> 한 덩어리를 복사해서 바꾸세요 -->
-    <ol class="sheets fade">
-      <li class="sheet">
-        <span class="sheet__no">01</span>
-        <div class="sheet__text">
-          <h3>나의 강점은 어떻게 활용될까?</h3>
-          <p>VIA 강점 검사를 바탕으로 나의 강점을 정리하고 실생활 활용법을 탐색</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">02</span>
-        <div class="sheet__text">
-          <h3>AI 강점 분석 리포트</h3>
-          <p>AI와 함께 강점(사회성·호기심·열정)을 분석하고 진로와 연결</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">03</span>
-        <div class="sheet__text">
-          <h3>직업탐색 활동 ① — 나의 직업 선택 기준</h3>
-          <p>직업 선택에서 중요하게 여기는 가치의 우선순위 정리</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">04</span>
-        <div class="sheet__text">
-          <h3>직업탐색 활동 ② — 직업 가치와 직업군</h3>
-          <p>관심 직업(IT 보안 전문가 등)의 하는 일·자격·전형 조사</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">05</span>
-        <div class="sheet__text">
-          <h3>학과탐색 활동</h3>
-          <p>컴퓨터공학·정보보호학과의 교육과정·입시결과·권장과목 탐색</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">06</span>
-        <div class="sheet__text">
-          <h3>대입전형의 기본 이해</h3>
-          <p>수시·정시 전형 종류와 평가 요소, 모집요강 분석</p>
-        </div>
-      </li>
-      <li class="sheet">
-        <span class="sheet__no">07</span>
-        <div class="sheet__text">
-          <h3>디지털 진로포트폴리오 기획서</h3>
-          <p>1학기 진로활동을 돌아보고 이 포트폴리오의 구성을 설계</p>
-        </div>
-      </li>
-    </ol>
-
-    <div class="sheets__more fade">
-      <a class="btn btn--line" href="assets/docs/career-worksheets.pdf" target="_blank" rel="noopener">
-        학습지 전체 PDF 보기 ↗
-      </a>
-    </div>
-  </div>
-</section>
-
-<!--
-  ═══════════════════════════════════════════════════════════════
-  독서 활동 (지금은 숨겨져 있습니다)
-  기록이 쌓이면 아래 주석을 풀고, 헤더의 <a href="#reading">독서</a> 도 함께 풀어주세요.
-  ═══════════════════════════════════════════════════════════════
-
-<section class="band" id="reading">
-  <div class="shell">
-    <header class="band__head fade">
-      <span class="band__num">05</span>
-      <h2 class="band__title">독서 &amp; 학습 기록</h2>
-      <p class="band__note">학년별 기록</p>
-    </header>
-
-    <div class="acc">
-      <details class="acc__item fade" open>
-        <summary><span class="acc__tag">1학년</span> 기초를 다진 시간</summary>
-        <ul class="acc__body">
-          <li><strong>책 제목</strong><span>읽고 느낀 점을 한 줄로 적어주세요.</span></li>
-        </ul>
-      </details>
-    </div>
-  </div>
-</section>
--->
-
-<!-- ─────────────── 04 연락처 ─────────────── -->
-<section class="band band--end" id="contact">
-  <div class="shell cta">
-    <span class="band__num fade">05</span>
-    <h2 class="cta__title fade">함께 만들어갈 이야기를<br>기다리고 있습니다.</h2>
-
-    <a class="cta__mail fade" href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a>
-
-    <div class="cta__links fade">
-      <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub<span>↗</span></a>
-      <a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">Velog<span>↗</span></a>
-      <a href="tel:01034534185">010-3453-4185</a>
-    </div>
-  </div>
-</section>
-
+  <footer class="foot">
+    <p>© <span id="year">2026</span> 박채아 · @c7aea_</p>
+    <p class="foot__sub">HTML · CSS · JavaScript로 직접 제작 · GitHub Pages 배포</p>
+  </footer>
 </main>
 
-<footer class="site-footer">
-  <div class="shell footer__row">
-    <p>© <span id="year">2026</span> 박채아</p>
-    <a href="#top">맨 위로 ↑</a>
+<!-- ═══════════════ 게시물 모달 ═══════════════ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" type="button" data-close aria-label="닫기">✕</button>
+    <div class="modal__media" id="modalMedia"></div>
+    <div class="modal__panel">
+      <div class="modal__head">
+        <span class="modal__avatar">박</span>
+        <div>
+          <p class="modal__handle">c7aea_</p>
+          <p class="modal__cat" id="modalCat"></p>
+        </div>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
   </div>
-</footer>
+</div>
 
-<script src="assets/js/main.js?v=8"></script>
+<!-- ═══════════════ 게시물 데이터 (숨김 · 여기 내용만 고치면 됩니다) ═══════════════ -->
+<div class="posts-data" hidden aria-hidden="true">
+
+  <!-- ── pwn..helpme ── -->
+  <article id="data-pwn" data-media="assets/img/pwn-helpme.svg" data-cat="보안 · Layer7 학기말 프로젝트">
+    <h2 class="post__title" id="post-pwn-title">pwn..helpme</h2>
+    <p class="post__meta">Layer7 학기말 프로젝트 · 2인 팀 · 기획 &amp; 개발 담당</p>
+    <p>pwnable(시스템 해킹) 문제를 풀 때마다 비슷한 익스플로잇 코드를 반복해서 작성해야 하는 불편함을 줄이기 위해 만든 <b>익스플로잇 코드 자동 작성 보조 도구</b>입니다. 사용자가 분석한 오프셋만 입력하면 pwntools 기반 공격 코드의 기본 골격을 자동으로 만들어 줍니다.</p>
+    <p class="post__sub">주요 기능</p>
+    <ul class="post__list">
+      <li>ELF 바이너리 헤더를 <b>직접 파싱</b>해 보호기법(Canary·NX·PIE·RELRO)을 자동 판별</li>
+      <li>get_shell·system 등 <b>공격에 쓰이는 타깃 심볼과 주소</b>를 자동 탐색</li>
+      <li>분석 결과로 pwntools 익스플로잇 코드(<code>ex.py</code>) 골격을 자동 생성</li>
+      <li>외부 라이브러리 없이 <b>순수 파이썬</b>으로 바이너리 구조 분석을 구현</li>
+    </ul>
+    <p class="post__sub">배운 점</p>
+    <p>자동화 도구를 직접 만들어 보며 ELF 파일 구조와 메모리 보호기법의 동작 원리를 깊이 이해하게 되었고, 도구가 대신해 줄 수 없는 ‘분석하고 논리를 세우는 힘’이 중요하다는 것을 느꼈습니다.</p>
+    <ul class="post__tags"><li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li><li>pwnable</li></ul>
+    <div class="post__links">
+      <a href="https://github.com/chaea73/portfolio/tree/main/projects/pwn-helpme" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+      <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">소스 코드 보기 ↗</a>
+    </div>
+  </article>
+
+  <!-- ── Safe Way Map ── -->
+  <article id="data-safeway" data-media="assets/img/safewaymap.svg" data-cat="앱 · AI · 창의아이디어 경진대회">
+    <h2 class="post__title">Safe Way Map</h2>
+    <p class="post__meta">창의아이디어 경진대회 · 2인 팀 · LLM 기능 개발 &amp; 발표 담당</p>
+    <p>‘밤늦게 어두운 골목을 지날 때 느끼는 불안’에서 출발한 <b>안심 경로 추천 앱</b>입니다. 공공데이터(경찰서·가로등 위치)와 시민들이 남긴 안전도 평가를 함께 활용해, 목적지까지 가장 안전한 길을 안내합니다.</p>
+    <p class="post__sub">주요 기능</p>
+    <ul class="post__list">
+      <li><b>안심 경로 추천</b> — 목적지를 입력하면 안심 점수가 가장 높은 경로를 안내</li>
+      <li><b>골목·도로 안전도 평가</b> — 실제 이동한 길을 1~5점으로 평가해 데이터를 함께 만듦</li>
+      <li><b>LLM 기반 위험도 분석</b> — 사용자 평가와 CCTV·경찰서·가로등 데이터를 LLM이 분석해 가장 안전한 길을 선정</li>
+    </ul>
+    <p class="post__sub">차별점 &amp; 나의 역할</p>
+    <p>위험 지점을 지도에 ‘표시’만 하는 기존 앱과 달리, 안전도를 <b>경로 계산에 직접 반영</b>하는 점이 특징입니다. 저는 LLM 기반 위험도 분석 기능 개발과 발표를 맡았습니다.</p>
+    <ul class="post__tags"><li>Android Studio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li></ul>
+    <div class="post__links">
+      <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </article>
+
+  <!-- ── KBO 경기 일정 뷰어 ── -->
+  <article id="data-kbo" data-media="assets/img/kbo-schedule.svg" data-cat="데이터 · 개인 프로젝트">
+    <h2 class="post__title">KBO 경기 일정 뷰어</h2>
+    <p class="post__meta">개인 프로젝트 · Python</p>
+    <p>보고 싶은 야구 경기를 편하게 확인하려고 만든 <b>데스크톱 앱</b>입니다. KBO 공식 홈페이지의 월별 경기 일정을 자동으로 수집해 저장하고, 원하는 조건으로 걸러서 볼 수 있습니다.</p>
+    <p class="post__sub">주요 기능</p>
+    <ul class="post__list">
+      <li><b>일정 크롤링</b> — Selenium·BeautifulSoup으로 월별 경기 일정을 수집해 JSON으로 저장</li>
+      <li><b>표 형태 뷰어</b> — tkinter GUI에서 날짜·시간·상대·구장을 표로 확인</li>
+      <li><b>조건 필터</b> — 날짜·상대 팀·구장·우천취소 여부로 원하는 경기만 골라 보기</li>
+    </ul>
+    <p class="post__sub">배운 점</p>
+    <p>웹에서 데이터를 수집(크롤링)하고, 저장하고, 화면에 보여 주는 과정을 처음부터 끝까지 직접 만들어 보며 데이터가 흐르는 전체 구조를 이해하게 되었습니다.</p>
+    <ul class="post__tags"><li>Python</li><li>tkinter</li><li>pandas</li><li>Selenium</li><li>BeautifulSoup</li></ul>
+    <div class="post__links">
+      <a href="https://github.com/chaea73/portfolio/tree/main/projects/kbo-schedule" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+      <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">소스 코드 보기 ↗</a>
+    </div>
+  </article>
+
+  <!-- ── TAP TAK ── -->
+  <article id="data-taptak" data-media="assets/img/taptak.svg" data-cat="접근성 · 앱솔루트 팀">
+    <h2 class="post__title">TAP TAK</h2>
+    <p class="post__meta">앱솔루트 팀 · 3인 · 기획 &amp; 발표 담당</p>
+    <p>디지털 기기가 익숙하지 않은 <b>디지털 소외 계층도 쉽게 쓸 수 있도록</b> 만든 접근성 앱입니다. ‘탭하면 탁’이라는 이름처럼 크고 단순한 UI로 누구나 어려움 없이 사용할 수 있게 설계했습니다.</p>
+    <p class="post__sub">세 가지 핵심 기능</p>
+    <ul class="post__list">
+      <li><b>간단통화</b> — 흔들기만 하면 119·112 또는 지정 연락처로 내 위치와 긴급 문자를 전송</li>
+      <li><b>셀프계산대</b> — 무인 키오스크 사용법을 미리 연습하고 안내</li>
+      <li><b>지도</b> — 복잡한 과정 없이 주소만 입력하면 길을 안내</li>
+    </ul>
+    <p class="post__sub">나의 역할</p>
+    <p>앱인벤터(App Inventor)로 제작했으며, 저는 앱의 기획과 발표를 담당했습니다. ‘모두가 디지털에 평등한 세상’을 목표로 한 프로젝트입니다.</p>
+    <ul class="post__tags"><li>App Inventor</li><li>블록 코딩</li><li>접근성</li><li>UX</li></ul>
+    <div class="post__links">
+      <a href="https://github.com/chaea73/portfolio/tree/main/projects/taptak" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+      <a href="https://github.com/chaea73/portfolio/blob/main/projects/taptak/TapTak.aia" target="_blank" rel="noopener">.aia 파일 ↗</a>
+    </div>
+  </article>
+
+  <!-- ── 하이라이트: 소개 ── -->
+  <article id="data-about" data-cat="소개">
+    <h2 class="post__title">👋 소개</h2>
+    <p class="bio__quote" style="margin-bottom:14px">“어떻게 동작하는지 알아야, 어떻게 지킬지도 알 수 있다고 생각합니다.”</p>
+    <p>선린인터넷고등학교 정보보호과에서 공부하고 있는 박채아입니다. 정보보호과에 들어와 보안을 배우기 시작했고, 공격과 방어를 함께 이해하려면 결국 시스템이 어떻게 만들어졌는지부터 알아야 한다는 것을 느끼고 있습니다.</p>
+    <p>그래서 배운 내용을 그냥 넘기지 않고 직접 만들어 보거나 기록으로 남기려고 합니다. 이 포트폴리오도 템플릿 없이 직접 코딩해 만든 결과물입니다.</p>
+    <p class="post__sub">지금 집중하는 것</p>
+    <ul class="post__list">
+      <li><b>정보보안 기초</b> — 네트워크 · 시스템 · 암호</li>
+      <li><b>Layer7 동아리</b> — 26기, 스터디와 CTF</li>
+      <li><b>웹 개발</b> — 직접 만들어 보며 이해하기</li>
+    </ul>
+  </article>
+
+  <!-- ── 하이라이트: 이력 ── -->
+  <article id="data-career" data-cat="이력">
+    <h2 class="post__title">🎓 이력</h2>
+    <p class="post__sub">학력</p>
+    <ul class="post__list">
+      <li>선린인터넷고등학교 정보보호과 <span class="post__dim">(2026.03 ~ 재학 중)</span></li>
+    </ul>
+    <p class="post__sub">활동</p>
+    <ul class="post__list">
+      <li>교내 정보보안 동아리 <b>Layer7</b> 26기 <span class="post__dim">(2026 ~)</span></li>
+    </ul>
+    <p class="post__dim" style="margin-top:14px">자격증·수상 등은 앞으로 채워 나갈 예정입니다.</p>
+  </article>
+
+  <!-- ── 하이라이트: 관심분야 ── -->
+  <article id="data-skills" data-cat="관심분야">
+    <h2 class="post__title">🧩 관심분야</h2>
+    <p>보안을 중심으로, 실제로 만들어 보며 배우는 것을 좋아합니다.</p>
+    <ul class="post__tags" style="margin-top:14px">
+      <li>정보보안</li><li>시스템 해킹(pwnable)</li><li>웹 개발</li><li>Python</li><li>데이터 수집</li><li>앱 개발</li><li>UX·접근성</li>
+    </ul>
+  </article>
+
+  <!-- ── 하이라이트: 진로학습 ── -->
+  <article id="data-sheets" data-cat="진로 학습 기록">
+    <h2 class="post__title">📚 진로 학습 기록</h2>
+    <p>‘무엘쌤과 함께하는 진로여행’ 수업에서 진행한 진로 활동지 기록입니다.</p>
+    <ul class="post__list" style="margin-top:12px">
+      <li>나의 강점은 어떻게 활용될까? <span class="post__dim">(VIA 강점 검사)</span></li>
+      <li>AI 강점 분석 리포트</li>
+      <li>직업탐색 활동 ① — 나의 직업 선택 기준</li>
+      <li>직업탐색 활동 ② — 나의 직업 가치</li>
+      <li>학과탐색 활동</li>
+      <li>대입전형의 기본 이해</li>
+      <li>디지털 진로포트폴리오 기획서</li>
+    </ul>
+    <div class="post__links">
+      <a href="assets/docs/career-worksheets.pdf" target="_blank" rel="noopener">활동지 원본 PDF 보기 ↗</a>
+    </div>
+  </article>
+
+  <!-- ── 하이라이트: 연락처 ── -->
+  <article id="data-contact" data-cat="연락처">
+    <h2 class="post__title">✉️ 연락처</h2>
+    <p>연락은 편하게 주세요. 함께 만들어갈 이야기를 기다리고 있습니다.</p>
+    <ul class="post__list" style="margin-top:12px">
+      <li>이메일 · <a href="mailto:qkr.chaea73@gmail.com">qkr.chaea73@gmail.com</a></li>
+      <li>GitHub · <a href="https://github.com/chaea73" target="_blank" rel="noopener">github.com/chaea73</a></li>
+      <li>Velog · <a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">velog.io/@c7aea_</a></li>
+      <li>연락처 · <a href="tel:01034534185">010-3453-4185</a></li>
+    </ul>
+  </article>
+
+</div>
+
+<script src="assets/js/main.js?v=10"></script>
 </body>
 </html>

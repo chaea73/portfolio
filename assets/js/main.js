@@ -1,7 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   박채아 — Portfolio
-   1) 테마 전환  2) 모바일 메뉴  3) 스크롤 상태
-   4) 스킬 숙련도 점 그리기  5) 등장 애니메이션
+   박채아 — Portfolio (Instagram concept)
+   1) 테마 전환   2) 게시물 모달   3) 푸터 연도
    ═══════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -14,14 +13,13 @@
   const themeBtn = document.getElementById('themeBtn');
   const meta = document.querySelector('meta[name="theme-color"]');
 
-  setTheme(localStorage.getItem(KEY) ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-
   function setTheme(theme) {
     root.setAttribute('data-theme', theme);
     if (themeBtn) themeBtn.setAttribute('aria-label', theme === 'dark' ? '밝은 테마로 전환' : '어두운 테마로 전환');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d1117' : '#f6f8fa');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#000000' : '#ffffff');
   }
+  setTheme(localStorage.getItem(KEY) ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 
   themeBtn?.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -29,95 +27,57 @@
     localStorage.setItem(KEY, next);
   });
 
-  /* 2. 모바일 메뉴 ──────────────────────────────────────── */
-  const menuBtn = document.getElementById('menuBtn');
-  const nav = document.getElementById('nav');
+  /* 2. 게시물 모달 ──────────────────────────────────────── */
+  const modal     = document.getElementById('modal');
+  const dialog    = modal?.querySelector('.modal__dialog');
+  const modalMedia = document.getElementById('modalMedia');
+  const modalBody = document.getElementById('modalBody');
+  const modalCat  = document.getElementById('modalCat');
+  let lastFocused = null;
 
-  function closeMenu() {
-    nav?.classList.remove('open');
-    menuBtn?.setAttribute('aria-expanded', 'false');
-    menuBtn?.setAttribute('aria-label', '메뉴 열기');
-  }
+  function openPost(id) {
+    const data = document.getElementById('data-' + id);
+    if (!data || !modal) return;
 
-  menuBtn?.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
-  });
+    const media = data.getAttribute('data-media');
+    const cat   = data.getAttribute('data-cat') || '';
 
-  nav?.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-
-  /* 3. 스크롤: 헤더 선 + 현재 섹션 표시 ─────────────────── */
-  const header = document.getElementById('header');
-  const navLinks = Array.from(document.querySelectorAll('.nav a'));
-  const targets = navLinks
-    .map((a) => document.querySelector(a.getAttribute('href')))
-    .filter(Boolean);
-
-  let queued = false;
-
-  function onScroll() {
-    queued = false;
-    header?.classList.toggle('stuck', window.scrollY > 8);
-
-    const line = window.scrollY + 160;
-    let current = null;
-    for (const el of targets) if (el.offsetTop <= line) current = el;
-
-    // 페이지 맨 아래에 도달하면 마지막 항목을 활성화
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
-      current = targets[targets.length - 1];
+    // 미디어(이미지) 유무에 따라 레이아웃 전환
+    if (media) {
+      dialog.classList.remove('is-text');
+      modalMedia.style.backgroundImage = "url('" + media + "')";
+    } else {
+      dialog.classList.add('is-text');
+      modalMedia.style.backgroundImage = '';
     }
 
-    navLinks.forEach((a) => {
-      a.classList.toggle('on', !!current && a.getAttribute('href') === '#' + current.id);
-    });
+    modalCat.textContent = cat;
+    modalBody.innerHTML = data.innerHTML;
+
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    document.body.classList.add('no-scroll');
+    modal.querySelector('.modal__close')?.focus();
   }
 
-  window.addEventListener('scroll', () => {
-    if (!queued) { queued = true; requestAnimationFrame(onScroll); }
-  }, { passive: true });
+  function closePost() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.classList.remove('no-scroll');
+    modalBody.innerHTML = '';
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
 
-  window.addEventListener('resize', onScroll);
-  onScroll();
-
-  /* 4. 스킬 숙련도 (data-level 0~3 → 점 세 개) ──────────── */
-  document.querySelectorAll('.skills__list li[data-level]').forEach((li) => {
-    const level = Math.max(0, Math.min(3, Number(li.dataset.level) || 0));
-    if (!level) return;
-
-    const gauge = document.createElement('span');
-    gauge.className = 'lv';
-    gauge.setAttribute('role', 'img');
-    gauge.setAttribute('aria-label', `숙련도 ${['', '하', '중', '상'][level]}`);
-
-    for (let i = 1; i <= 3; i++) {
-      const dot = document.createElement('i');
-      if (i <= level) dot.className = 'f';
-      gauge.appendChild(dot);
-    }
-    li.appendChild(gauge);
+  // 타일 · 하이라이트 클릭
+  document.querySelectorAll('[data-post]').forEach((el) => {
+    el.addEventListener('click', () => openPost(el.getAttribute('data-post')));
   });
 
-  /* 5. 등장 애니메이션 ──────────────────────────────────── */
-  const items = document.querySelectorAll('.fade');
+  // 닫기: 배경/닫기버튼/ESC
+  modal?.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', closePost));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePost(); });
 
-  if (!window.IntersectionObserver || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    items.forEach((el) => el.classList.add('in'));
-  } else {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (!entry.isIntersecting) return;
-        setTimeout(() => entry.target.classList.add('in'), i * 80);
-        io.unobserve(entry.target);
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
-
-    items.forEach((el) => io.observe(el));
-  }
-
-  /* 6. 푸터 연도 ────────────────────────────────────────── */
+  /* 3. 푸터 연도 ────────────────────────────────────────── */
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();
