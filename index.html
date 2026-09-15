@@ -1,301 +1,298 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="light">
+<html lang="ko" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>박채아 · @c7aea_ — Portfolio</title>
-<meta name="description" content="선린인터넷고등학교 정보보호과 박채아의 포트폴리오. 인스타그램 피드처럼 둘러보는 프로젝트 모음.">
+<title>박채아 · c7aea_ — Portfolio</title>
+<meta name="description" content="선린인터넷고등학교 정보보호과 박채아의 포트폴리오. 인스타그램 UI로 둘러보는 프로젝트 모음.">
 <meta name="author" content="박채아">
-<meta name="theme-color" content="#ffffff">
-
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
-<meta property="og:title" content="박채아 · @c7aea_ — Portfolio">
+<meta property="og:title" content="박채아 · c7aea_ — Portfolio">
 <meta property="og:description" content="정보보호과 · Layer7 26기 · 프로젝트 피드">
 <meta property="og:locale" content="ko_KR">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='%23f09433'/><stop offset='.5' stop-color='%23dc2743'/><stop offset='1' stop-color='%23bc1888'/></linearGradient></defs><rect width='32' height='32' rx='9' fill='url(%23g)'/><text x='16' y='22' font-size='15' font-family='sans-serif' font-weight='800' fill='%23fff' text-anchor='middle'>%EB%B0%95</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='%23f09433'/><stop offset='.5' stop-color='%23dc2743'/><stop offset='1' stop-color='%23bc1888'/></linearGradient></defs><rect width='32' height='32' rx='9' fill='url(%23g)'/><rect x='8' y='8' width='16' height='16' rx='5' fill='none' stroke='%23fff' stroke-width='2'/><circle cx='16' cy='16' r='3.4' fill='none' stroke='%23fff' stroke-width='2'/><circle cx='21.5' cy='10.5' r='1.3' fill='%23fff'/></svg>">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 
 <body>
-<a href="#feed" class="skip">본문 바로가기</a>
+<a href="#main" class="skip">본문 바로가기</a>
 
-<!-- ─────────────── 상단바 ─────────────── -->
-<header class="topbar">
-  <div class="topbar__inner">
-    <a href="#top" class="logo">Portfoliogram</a>
-    <div class="topbar__right">
-      <span class="topbar__handle">@c7aea_</span>
-      <button class="iconbtn" id="themeBtn" type="button" aria-label="어두운 테마로 전환">
+<div class="app">
+
+  <!-- ═══════════ 왼쪽 사이드바 ═══════════ -->
+  <nav class="side" aria-label="인스타그램 내비게이션">
+    <a class="side__logo" href="#top" aria-label="홈">
+      <span class="side__logoText">Instagram</span>
+      <span class="side__logoMark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </span>
+    </a>
+
+    <ul class="side__nav">
+      <li><a href="#top" class="side__item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg><span>홈</span></a></li>
+      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>검색</span></button></li>
+      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"/></svg><span>탐색</span></button></li>
+      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="m9 8 5 4-5 4z" fill="currentColor" stroke="none"/></svg><span>릴스</span></button></li>
+      <li><a href="mailto:qkr.chaea73@gmail.com" class="side__item"><span class="side__badge">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 11 14"/><path d="M22 3 15 22l-4-8-8-4z"/></svg><span>메시지</span></a></li>
+      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.2-8.8 10.4-8.8 10.4S3.2 13.8 3.2 8.6A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 8.8 2.6z"/></svg><span>알림</span></button></li>
+      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M12 8v8M8 12h8"/></svg><span>만들기</span></button></li>
+      <li><a href="#top" class="side__item side__item--profile"><span class="side__ava" aria-hidden="true"></span><span>프로필</span></a></li>
+    </ul>
+
+    <div class="side__foot">
+      <button class="side__item" id="themeBtn" type="button" aria-label="테마 전환">
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
+        <span>모드 전환</span>
       </button>
+      <button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>더 보기</span></button>
     </div>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ─────────────── 프로필 헤더 ─────────────── -->
-  <section class="profile">
-    <div class="profile__avatar">
-      <span class="profile__ring">
-        <span class="profile__pic">박채아</span>
-      </span>
-    </div>
-
-    <div class="profile__main">
-      <div class="profile__line">
-        <h1 class="profile__handle">c7aea_</h1>
-        <div class="profile__actions">
-          <a class="ig-btn ig-btn--primary" href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub</a>
-          <a class="ig-btn" href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">Velog</a>
-          <a class="ig-btn" href="mailto:qkr.chaea73@gmail.com" aria-label="이메일 보내기">메시지</a>
-        </div>
-      </div>
-
-      <ul class="profile__stats">
-        <li><b>4</b> 프로젝트</li>
-        <li><b>7</b> 학습지</li>
-        <li><b>Layer7</b> 26기</li>
-      </ul>
-
-      <div class="profile__bio">
-        <p class="bio__name">박채아 <span class="bio__badge">정보보호과</span></p>
-        <p>선린인터넷고등학교 정보보호과 1학년</p>
-        <p>🔐 보안 동아리 Layer7 26기 · 개발 &amp; 보안 학습 중</p>
-        <p class="bio__quote">“만드는 법과 지키는 법을 함께 배웁니다”</p>
-        <p><a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">🔗 velog.io/@c7aea_</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─────────────── 스토리 하이라이트 ─────────────── -->
-  <nav class="highlights" aria-label="소개 하이라이트">
-    <button class="hl" type="button" data-post="about">
-      <span class="hl__ring"><span class="hl__emoji">👋</span></span>
-      <span class="hl__label">소개</span>
-    </button>
-    <button class="hl" type="button" data-post="career">
-      <span class="hl__ring"><span class="hl__emoji">🎓</span></span>
-      <span class="hl__label">이력</span>
-    </button>
-    <button class="hl" type="button" data-post="skills">
-      <span class="hl__ring"><span class="hl__emoji">🧩</span></span>
-      <span class="hl__label">관심분야</span>
-    </button>
-    <button class="hl" type="button" data-post="sheets">
-      <span class="hl__ring"><span class="hl__emoji">📚</span></span>
-      <span class="hl__label">진로학습</span>
-    </button>
-    <button class="hl" type="button" data-post="contact">
-      <span class="hl__ring"><span class="hl__emoji">✉️</span></span>
-      <span class="hl__label">연락처</span>
-    </button>
   </nav>
 
-  <!-- ─────────────── 탭바 ─────────────── -->
-  <div class="tabbar" id="feed">
-    <span class="tab is-active">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      게시물
-    </span>
-    <span class="tab__hint">타일을 누르면 프로젝트 상세가 열립니다</span>
-  </div>
+  <!-- ═══════════ 본문 ═══════════ -->
+  <main class="main" id="main">
+    <div class="page" id="top">
 
-  <!-- ─────────────── 피드 그리드 ─────────────── -->
-  <section class="grid" aria-label="프로젝트 목록">
+      <!-- 프로필 헤더 -->
+      <header class="pf">
+        <div class="pf__avaWrap">
+          <div class="pf__note" aria-hidden="true">메모…</div>
+          <div class="pf__ava"><span>박채아</span></div>
+        </div>
 
-    <button class="tile" type="button" data-post="pwn" style="background-image:url('assets/img/pwn-helpme.svg')">
-      <span class="tile__cat">보안</span>
-      <span class="tile__hover">
-        <span class="tile__title">pwn..helpme</span>
-        <span class="tile__stat">♥ 128 &nbsp; 💬 16</span>
-      </span>
-    </button>
+        <section class="pf__info">
+          <div class="pf__row">
+            <h1 class="pf__uname">c7aea_</h1>
+            <button class="gear" type="button" aria-label="설정" data-scrolltop>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.5-2-3.4-2.3 1a7.5 7.5 0 0 0-1.7-1l-.4-2.5H10.9l-.4 2.5a7.5 7.5 0 0 0-1.7 1l-2.3-1-2 3.4L4.6 11a7.6 7.6 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7.5 7.5 0 0 0 1.7 1l.4 2.5h4.2l.4-2.5a7.5 7.5 0 0 0 1.7-1l2.3 1 2-3.4z"/></svg>
+            </button>
+            <div class="pf__btns">
+              <a class="gbtn" href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub</a>
+              <a class="gbtn" href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">Velog</a>
+              <a class="gbtn gbtn--icon" href="mailto:qkr.chaea73@gmail.com" aria-label="메시지">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 11 14"/><path d="M22 3 15 22l-4-8-8-4z"/></svg>
+              </a>
+            </div>
+          </div>
 
-    <button class="tile" type="button" data-post="safeway" style="background-image:url('assets/img/safewaymap.svg')">
-      <span class="tile__cat">앱 · AI</span>
-      <span class="tile__hover">
-        <span class="tile__title">Safe Way Map</span>
-        <span class="tile__stat">♥ 96 &nbsp; 💬 11</span>
-      </span>
-    </button>
+          <ul class="pf__stats">
+            <li><b>4</b> 게시물</li>
+            <li><b>282</b> 팔로워</li>
+            <li><b>233</b> 팔로우</li>
+          </ul>
 
-    <button class="tile" type="button" data-post="kbo" style="background-image:url('assets/img/kbo-schedule.svg')">
-      <span class="tile__cat">데이터</span>
-      <span class="tile__hover">
-        <span class="tile__title">KBO 경기 일정 뷰어</span>
-        <span class="tile__stat">♥ 74 &nbsp; 💬 9</span>
-      </span>
-    </button>
+          <div class="pf__bio">
+            <p class="pf__name">박채아 <span class="pf__cat">정보보호과</span></p>
+            <p>선린인터넷고등학교 정보보호과 1학년</p>
+            <p>🔐 보안 동아리 Layer7 26기 · 개발 &amp; 보안 학습 중</p>
+            <p class="pf__quote">“만드는 법과 지키는 법을 함께 배웁니다”</p>
+            <p><a href="https://velog.io/@c7aea_/posts" target="_blank" rel="noopener">🔗 velog.io/@c7aea_</a></p>
+          </div>
+        </section>
+      </header>
 
-    <button class="tile" type="button" data-post="taptak" style="background-image:url('assets/img/taptak.svg')">
-      <span class="tile__cat">접근성</span>
-      <span class="tile__hover">
-        <span class="tile__title">TAP TAK</span>
-        <span class="tile__stat">♥ 88 &nbsp; 💬 13</span>
-      </span>
-    </button>
+      <!-- 스토리 하이라이트 -->
+      <nav class="story" aria-label="하이라이트">
+        <button class="story__item" type="button" data-post="about">
+          <span class="story__ring"><span class="story__emoji">👋</span></span><span class="story__label">소개</span>
+        </button>
+        <button class="story__item" type="button" data-post="career">
+          <span class="story__ring"><span class="story__emoji">🎓</span></span><span class="story__label">이력</span>
+        </button>
+        <button class="story__item" type="button" data-post="skills">
+          <span class="story__ring"><span class="story__emoji">🧩</span></span><span class="story__label">관심분야</span>
+        </button>
+        <button class="story__item" type="button" data-post="sheets">
+          <span class="story__ring"><span class="story__emoji">📚</span></span><span class="story__label">진로학습</span>
+        </button>
+        <button class="story__item" type="button" data-post="contact">
+          <span class="story__ring"><span class="story__emoji">✉️</span></span><span class="story__label">연락처</span>
+        </button>
+      </nav>
 
-  </section>
+      <!-- 탭바 -->
+      <div class="tabs" id="feed">
+        <span class="tabs__item is-active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          게시물
+        </span>
+        <span class="tabs__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+          저장됨
+        </span>
+        <span class="tabs__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/><circle cx="12" cy="8" r="4"/></svg>
+          태그됨
+        </span>
+      </div>
 
-  <footer class="foot">
-    <p>© <span id="year">2026</span> 박채아 · @c7aea_</p>
-    <p class="foot__sub">HTML · CSS · JavaScript로 직접 제작 · GitHub Pages 배포</p>
-  </footer>
-</main>
+      <!-- 피드 그리드 -->
+      <section class="grid" aria-label="프로젝트">
+        <button class="tile" type="button" data-post="pwn" style="background-image:url('assets/img/pwn-helpme.svg')">
+          <span class="tile__over"><span class="tile__stat">♥ 128</span><span class="tile__stat">💬 16</span></span>
+        </button>
+        <button class="tile" type="button" data-post="safeway" style="background-image:url('assets/img/safewaymap.svg')">
+          <span class="tile__over"><span class="tile__stat">♥ 96</span><span class="tile__stat">💬 11</span></span>
+        </button>
+        <button class="tile" type="button" data-post="kbo" style="background-image:url('assets/img/kbo-schedule.svg')">
+          <span class="tile__over"><span class="tile__stat">♥ 74</span><span class="tile__stat">💬 9</span></span>
+        </button>
+        <button class="tile" type="button" data-post="taptak" style="background-image:url('assets/img/taptak.svg')">
+          <span class="tile__over"><span class="tile__stat">♥ 88</span><span class="tile__stat">💬 13</span></span>
+        </button>
+      </section>
 
-<!-- ═══════════════ 게시물 모달 ═══════════════ -->
+      <footer class="foot">
+        <p>© <span id="year">2026</span> 박채아 · @c7aea_ · HTML·CSS·JS로 직접 제작</p>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<!-- ═══════════ 게시물 모달 (인스타 게시물 뷰) ═══════════ -->
 <div class="modal" id="modal" hidden>
+  <button class="modal__x" type="button" data-close aria-label="닫기">✕</button>
   <div class="modal__backdrop" data-close></div>
-  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal__close" type="button" data-close aria-label="닫기">✕</button>
+  <div class="modal__dialog" role="dialog" aria-modal="true">
     <div class="modal__media" id="modalMedia"></div>
     <div class="modal__panel">
       <div class="modal__head">
-        <span class="modal__avatar">박</span>
-        <div>
-          <p class="modal__handle">c7aea_</p>
+        <span class="modal__ava">박</span>
+        <div class="modal__headText">
+          <p class="modal__uname">c7aea_</p>
           <p class="modal__cat" id="modalCat"></p>
         </div>
       </div>
-      <div class="modal__body" id="modalBody"></div>
+      <div class="modal__scroll" id="modalBody"></div>
+      <div class="modal__actions">
+        <div class="modal__icons">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.3-9.3-8.5C1 8 3 4.5 6.4 4.5c2 0 3.2 1.2 3.6 2 .4-.8 1.6-2 3.6-2 3.4 0 5.4 3.5 3.7 7C19 15.7 12 20 12 20z"/></svg></span>
+          <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l.9-5A8 8 0 1 1 21 12z"/></svg></span>
+          <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 3 11 14"/><path d="M22 3 15 22l-4-8-8-4z"/></svg></span>
+          <span class="modal__save" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span>
+        </div>
+        <p class="modal__likes" id="modalLikes">좋아요 128개</p>
+        <p class="modal__time">방금 · 프로젝트 기록</p>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ 게시물 데이터 (숨김 · 여기 내용만 고치면 됩니다) ═══════════════ -->
+<!-- ═══════════ 게시물 데이터 (숨김 · 내용만 여기서 고치면 됩니다) ═══════════ -->
 <div class="posts-data" hidden aria-hidden="true">
 
-  <!-- ── pwn..helpme ── -->
-  <article id="data-pwn" data-media="assets/img/pwn-helpme.svg" data-cat="보안 · Layer7 학기말 프로젝트">
-    <h2 class="post__title" id="post-pwn-title">pwn..helpme</h2>
+  <article id="data-pwn" data-media="assets/img/pwn-helpme.svg" data-cat="보안 · Layer7 학기말 프로젝트" data-likes="128">
+    <h2 class="post__title">pwn..helpme</h2>
     <p class="post__meta">Layer7 학기말 프로젝트 · 2인 팀 · 기획 &amp; 개발 담당</p>
-    <p>pwnable(시스템 해킹) 문제를 풀 때마다 비슷한 익스플로잇 코드를 반복해서 작성해야 하는 불편함을 줄이기 위해 만든 <b>익스플로잇 코드 자동 작성 보조 도구</b>입니다. 사용자가 분석한 오프셋만 입력하면 pwntools 기반 공격 코드의 기본 골격을 자동으로 만들어 줍니다.</p>
+    <p>pwnable(시스템 해킹) 문제를 풀 때마다 반복되는 익스플로잇 코드 작성을 줄이기 위해 만든 <b>익스플로잇 코드 자동 작성 보조 도구</b>입니다. 분석한 오프셋만 입력하면 pwntools 기반 공격 코드의 기본 골격을 자동으로 만들어 줍니다.</p>
     <p class="post__sub">주요 기능</p>
     <ul class="post__list">
-      <li>ELF 바이너리 헤더를 <b>직접 파싱</b>해 보호기법(Canary·NX·PIE·RELRO)을 자동 판별</li>
-      <li>get_shell·system 등 <b>공격에 쓰이는 타깃 심볼과 주소</b>를 자동 탐색</li>
-      <li>분석 결과로 pwntools 익스플로잇 코드(<code>ex.py</code>) 골격을 자동 생성</li>
-      <li>외부 라이브러리 없이 <b>순수 파이썬</b>으로 바이너리 구조 분석을 구현</li>
+      <li>ELF 바이너리 헤더를 <b>직접 파싱</b>해 보호기법(Canary·NX·PIE·RELRO) 자동 판별</li>
+      <li>get_shell·system 등 <b>공격 대상 심볼과 주소</b>를 자동 탐색</li>
+      <li>분석 결과로 pwntools 익스플로잇 코드(<code>ex.py</code>) 골격 자동 생성</li>
+      <li>외부 라이브러리 없이 <b>순수 파이썬</b>으로 바이너리 구조 분석 구현</li>
     </ul>
     <p class="post__sub">배운 점</p>
-    <p>자동화 도구를 직접 만들어 보며 ELF 파일 구조와 메모리 보호기법의 동작 원리를 깊이 이해하게 되었고, 도구가 대신해 줄 수 없는 ‘분석하고 논리를 세우는 힘’이 중요하다는 것을 느꼈습니다.</p>
-    <ul class="post__tags"><li>Python</li><li>pwntools</li><li>GDB</li><li>WSL Ubuntu</li><li>pwnable</li></ul>
+    <p>도구를 직접 만들어 보며 ELF 구조와 메모리 보호기법의 원리를 깊이 이해했고, 자동화가 대신할 수 없는 ‘분석하고 논리를 세우는 힘’의 중요성을 느꼈습니다.</p>
+    <ul class="post__tags"><li>Python</li><li>pwntools</li><li>GDB</li><li>WSLUbuntu</li><li>pwnable</li></ul>
     <div class="post__links">
       <a href="https://github.com/chaea73/portfolio/tree/main/projects/pwn-helpme" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
-      <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">소스 코드 보기 ↗</a>
+      <a href="https://github.com/chaea73/portfolio/blob/main/projects/pwn-helpme/pwn_helpme.py" target="_blank" rel="noopener">소스 코드 ↗</a>
     </div>
   </article>
 
-  <!-- ── Safe Way Map ── -->
-  <article id="data-safeway" data-media="assets/img/safewaymap.svg" data-cat="앱 · AI · 창의아이디어 경진대회">
+  <article id="data-safeway" data-media="assets/img/safewaymap.svg" data-cat="앱 · AI · 창의아이디어 경진대회" data-likes="96">
     <h2 class="post__title">Safe Way Map</h2>
     <p class="post__meta">창의아이디어 경진대회 · 2인 팀 · LLM 기능 개발 &amp; 발표 담당</p>
-    <p>‘밤늦게 어두운 골목을 지날 때 느끼는 불안’에서 출발한 <b>안심 경로 추천 앱</b>입니다. 공공데이터(경찰서·가로등 위치)와 시민들이 남긴 안전도 평가를 함께 활용해, 목적지까지 가장 안전한 길을 안내합니다.</p>
+    <p>‘밤늦게 어두운 골목을 지날 때의 불안’에서 출발한 <b>안심 경로 추천 앱</b>입니다. 공공데이터(경찰서·가로등 위치)와 시민들의 안전도 평가를 함께 활용해 목적지까지 가장 안전한 길을 안내합니다.</p>
     <p class="post__sub">주요 기능</p>
     <ul class="post__list">
-      <li><b>안심 경로 추천</b> — 목적지를 입력하면 안심 점수가 가장 높은 경로를 안내</li>
-      <li><b>골목·도로 안전도 평가</b> — 실제 이동한 길을 1~5점으로 평가해 데이터를 함께 만듦</li>
-      <li><b>LLM 기반 위험도 분석</b> — 사용자 평가와 CCTV·경찰서·가로등 데이터를 LLM이 분석해 가장 안전한 길을 선정</li>
+      <li><b>안심 경로 추천</b> — 안심 점수가 가장 높은 경로 안내</li>
+      <li><b>골목·도로 안전도 평가</b> — 이동한 길을 1~5점으로 평가</li>
+      <li><b>LLM 위험도 분석</b> — 사용자 평가와 CCTV·경찰서·가로등 데이터를 LLM이 분석</li>
     </ul>
     <p class="post__sub">차별점 &amp; 나의 역할</p>
-    <p>위험 지점을 지도에 ‘표시’만 하는 기존 앱과 달리, 안전도를 <b>경로 계산에 직접 반영</b>하는 점이 특징입니다. 저는 LLM 기반 위험도 분석 기능 개발과 발표를 맡았습니다.</p>
-    <ul class="post__tags"><li>Android Studio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li></ul>
+    <p>위험 지점을 ‘표시’만 하는 기존 앱과 달리 안전도를 <b>경로 계산에 직접 반영</b>합니다. 저는 LLM 위험도 분석 기능 개발과 발표를 맡았습니다.</p>
+    <ul class="post__tags"><li>AndroidStudio</li><li>Kotlin</li><li>Firebase</li><li>LLM</li><li>공공데이터</li></ul>
     <div class="post__links">
       <a href="https://github.com/chaea73" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </article>
 
-  <!-- ── KBO 경기 일정 뷰어 ── -->
-  <article id="data-kbo" data-media="assets/img/kbo-schedule.svg" data-cat="데이터 · 개인 프로젝트">
+  <article id="data-kbo" data-media="assets/img/kbo-schedule.svg" data-cat="데이터 · 개인 프로젝트" data-likes="74">
     <h2 class="post__title">KBO 경기 일정 뷰어</h2>
     <p class="post__meta">개인 프로젝트 · Python</p>
-    <p>보고 싶은 야구 경기를 편하게 확인하려고 만든 <b>데스크톱 앱</b>입니다. KBO 공식 홈페이지의 월별 경기 일정을 자동으로 수집해 저장하고, 원하는 조건으로 걸러서 볼 수 있습니다.</p>
+    <p>보고 싶은 야구 경기를 편하게 확인하려고 만든 <b>데스크톱 앱</b>입니다. KBO 공식 홈페이지의 월별 경기 일정을 자동 수집해 저장하고, 원하는 조건으로 걸러 볼 수 있습니다.</p>
     <p class="post__sub">주요 기능</p>
     <ul class="post__list">
-      <li><b>일정 크롤링</b> — Selenium·BeautifulSoup으로 월별 경기 일정을 수집해 JSON으로 저장</li>
-      <li><b>표 형태 뷰어</b> — tkinter GUI에서 날짜·시간·상대·구장을 표로 확인</li>
-      <li><b>조건 필터</b> — 날짜·상대 팀·구장·우천취소 여부로 원하는 경기만 골라 보기</li>
+      <li><b>일정 크롤링</b> — Selenium·BeautifulSoup으로 수집 후 JSON 저장</li>
+      <li><b>표 뷰어</b> — tkinter GUI에서 날짜·시간·상대·구장을 표로 확인</li>
+      <li><b>조건 필터</b> — 날짜·상대·구장·우천취소로 원하는 경기만 보기</li>
     </ul>
     <p class="post__sub">배운 점</p>
-    <p>웹에서 데이터를 수집(크롤링)하고, 저장하고, 화면에 보여 주는 과정을 처음부터 끝까지 직접 만들어 보며 데이터가 흐르는 전체 구조를 이해하게 되었습니다.</p>
+    <p>데이터를 수집·저장·표시하는 과정을 처음부터 끝까지 직접 만들며 데이터가 흐르는 전체 구조를 이해했습니다.</p>
     <ul class="post__tags"><li>Python</li><li>tkinter</li><li>pandas</li><li>Selenium</li><li>BeautifulSoup</li></ul>
     <div class="post__links">
       <a href="https://github.com/chaea73/portfolio/tree/main/projects/kbo-schedule" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
-      <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">소스 코드 보기 ↗</a>
+      <a href="https://github.com/chaea73/portfolio/blob/main/projects/kbo-schedule/kbo.py" target="_blank" rel="noopener">소스 코드 ↗</a>
     </div>
   </article>
 
-  <!-- ── TAP TAK ── -->
-  <article id="data-taptak" data-media="assets/img/taptak.svg" data-cat="접근성 · 앱솔루트 팀">
+  <article id="data-taptak" data-media="assets/img/taptak.svg" data-cat="접근성 · 앱솔루트 팀" data-likes="88">
     <h2 class="post__title">TAP TAK</h2>
     <p class="post__meta">앱솔루트 팀 · 3인 · 기획 &amp; 발표 담당</p>
-    <p>디지털 기기가 익숙하지 않은 <b>디지털 소외 계층도 쉽게 쓸 수 있도록</b> 만든 접근성 앱입니다. ‘탭하면 탁’이라는 이름처럼 크고 단순한 UI로 누구나 어려움 없이 사용할 수 있게 설계했습니다.</p>
+    <p>디지털 기기가 익숙하지 않은 <b>디지털 소외 계층도 쉽게 쓸 수 있도록</b> 만든 접근성 앱입니다. ‘탭하면 탁’이라는 이름처럼 크고 단순한 UI로 누구나 쉽게 사용할 수 있게 설계했습니다.</p>
     <p class="post__sub">세 가지 핵심 기능</p>
     <ul class="post__list">
-      <li><b>간단통화</b> — 흔들기만 하면 119·112 또는 지정 연락처로 내 위치와 긴급 문자를 전송</li>
-      <li><b>셀프계산대</b> — 무인 키오스크 사용법을 미리 연습하고 안내</li>
-      <li><b>지도</b> — 복잡한 과정 없이 주소만 입력하면 길을 안내</li>
+      <li><b>간단통화</b> — 흔들면 119·112·지정 연락처로 위치와 긴급 문자 전송</li>
+      <li><b>셀프계산대</b> — 무인 키오스크 사용법 연습·안내</li>
+      <li><b>지도</b> — 주소만 입력하면 길 안내</li>
     </ul>
     <p class="post__sub">나의 역할</p>
-    <p>앱인벤터(App Inventor)로 제작했으며, 저는 앱의 기획과 발표를 담당했습니다. ‘모두가 디지털에 평등한 세상’을 목표로 한 프로젝트입니다.</p>
-    <ul class="post__tags"><li>App Inventor</li><li>블록 코딩</li><li>접근성</li><li>UX</li></ul>
+    <p>앱인벤터로 제작했으며 기획과 발표를 담당했습니다. ‘모두가 디지털에 평등한 세상’을 목표로 한 프로젝트입니다.</p>
+    <ul class="post__tags"><li>AppInventor</li><li>블록코딩</li><li>접근성</li><li>UX</li></ul>
     <div class="post__links">
       <a href="https://github.com/chaea73/portfolio/tree/main/projects/taptak" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
       <a href="https://github.com/chaea73/portfolio/blob/main/projects/taptak/TapTak.aia" target="_blank" rel="noopener">.aia 파일 ↗</a>
     </div>
   </article>
 
-  <!-- ── 하이라이트: 소개 ── -->
   <article id="data-about" data-cat="소개">
     <h2 class="post__title">👋 소개</h2>
-    <p class="bio__quote" style="margin-bottom:14px">“어떻게 동작하는지 알아야, 어떻게 지킬지도 알 수 있다고 생각합니다.”</p>
-    <p>선린인터넷고등학교 정보보호과에서 공부하고 있는 박채아입니다. 정보보호과에 들어와 보안을 배우기 시작했고, 공격과 방어를 함께 이해하려면 결국 시스템이 어떻게 만들어졌는지부터 알아야 한다는 것을 느끼고 있습니다.</p>
+    <p class="pf__quote" style="margin-bottom:14px">“어떻게 동작하는지 알아야, 어떻게 지킬지도 알 수 있다고 생각합니다.”</p>
+    <p>선린인터넷고등학교 정보보호과에서 공부하고 있는 박채아입니다. 공격과 방어를 함께 이해하려면 결국 시스템이 어떻게 만들어졌는지부터 알아야 한다고 느끼고 있습니다.</p>
     <p>그래서 배운 내용을 그냥 넘기지 않고 직접 만들어 보거나 기록으로 남기려고 합니다. 이 포트폴리오도 템플릿 없이 직접 코딩해 만든 결과물입니다.</p>
     <p class="post__sub">지금 집중하는 것</p>
-    <ul class="post__list">
-      <li><b>정보보안 기초</b> — 네트워크 · 시스템 · 암호</li>
-      <li><b>Layer7 동아리</b> — 26기, 스터디와 CTF</li>
-      <li><b>웹 개발</b> — 직접 만들어 보며 이해하기</li>
-    </ul>
+    <ul class="post__list"><li><b>정보보안 기초</b> — 네트워크·시스템·암호</li><li><b>Layer7 동아리</b> — 26기, 스터디와 CTF</li><li><b>웹 개발</b> — 직접 만들어 보며 이해하기</li></ul>
   </article>
 
-  <!-- ── 하이라이트: 이력 ── -->
   <article id="data-career" data-cat="이력">
     <h2 class="post__title">🎓 이력</h2>
     <p class="post__sub">학력</p>
-    <ul class="post__list">
-      <li>선린인터넷고등학교 정보보호과 <span class="post__dim">(2026.03 ~ 재학 중)</span></li>
-    </ul>
+    <ul class="post__list"><li>선린인터넷고등학교 정보보호과 <span class="post__dim">(2026.03 ~ 재학 중)</span></li></ul>
     <p class="post__sub">활동</p>
-    <ul class="post__list">
-      <li>교내 정보보안 동아리 <b>Layer7</b> 26기 <span class="post__dim">(2026 ~)</span></li>
-    </ul>
+    <ul class="post__list"><li>교내 정보보안 동아리 <b>Layer7</b> 26기 <span class="post__dim">(2026 ~)</span></li></ul>
     <p class="post__dim" style="margin-top:14px">자격증·수상 등은 앞으로 채워 나갈 예정입니다.</p>
   </article>
 
-  <!-- ── 하이라이트: 관심분야 ── -->
   <article id="data-skills" data-cat="관심분야">
     <h2 class="post__title">🧩 관심분야</h2>
     <p>보안을 중심으로, 실제로 만들어 보며 배우는 것을 좋아합니다.</p>
-    <ul class="post__tags" style="margin-top:14px">
-      <li>정보보안</li><li>시스템 해킹(pwnable)</li><li>웹 개발</li><li>Python</li><li>데이터 수집</li><li>앱 개발</li><li>UX·접근성</li>
-    </ul>
+    <ul class="post__tags" style="margin-top:14px"><li>정보보안</li><li>시스템해킹</li><li>웹개발</li><li>Python</li><li>데이터수집</li><li>앱개발</li><li>접근성</li></ul>
   </article>
 
-  <!-- ── 하이라이트: 진로학습 ── -->
   <article id="data-sheets" data-cat="진로 학습 기록">
     <h2 class="post__title">📚 진로 학습 기록</h2>
-    <p>‘무엘쌤과 함께하는 진로여행’ 수업에서 진행한 진로 활동지 기록입니다.</p>
+    <p>‘무엘쌤과 함께하는 진로여행’ 수업의 진로 활동지 기록입니다.</p>
     <ul class="post__list" style="margin-top:12px">
       <li>나의 강점은 어떻게 활용될까? <span class="post__dim">(VIA 강점 검사)</span></li>
       <li>AI 강점 분석 리포트</li>
@@ -305,12 +302,9 @@
       <li>대입전형의 기본 이해</li>
       <li>디지털 진로포트폴리오 기획서</li>
     </ul>
-    <div class="post__links">
-      <a href="assets/docs/career-worksheets.pdf" target="_blank" rel="noopener">활동지 원본 PDF 보기 ↗</a>
-    </div>
+    <div class="post__links"><a href="assets/docs/career-worksheets.pdf" target="_blank" rel="noopener">활동지 원본 PDF ↗</a></div>
   </article>
 
-  <!-- ── 하이라이트: 연락처 ── -->
   <article id="data-contact" data-cat="연락처">
     <h2 class="post__title">✉️ 연락처</h2>
     <p>연락은 편하게 주세요. 함께 만들어갈 이야기를 기다리고 있습니다.</p>
@@ -324,6 +318,6 @@
 
 </div>
 
-<script src="assets/js/main.js?v=12"></script>
+<script src="assets/js/main.js?v=13"></script>
 </body>
 </html>
