@@ -73,6 +73,68 @@
   modal?.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', close));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 
+  /* 스토리 뷰어 */
+  const sv = document.getElementById('sv');
+  const svStage = document.getElementById('svStage');
+  const svBars = document.getElementById('svBars');
+  const svName = document.getElementById('svName');
+  let pages = [], idx = 0, timer = null, lastSv = null;
+  const DUR = 4500;
+
+  function openStory(id) {
+    const src = document.getElementById('sd-' + id);
+    if (!src || !sv) return;
+    pages = Array.from(src.querySelectorAll('.spage'));
+    if (!pages.length) return;
+    if (svName) svName.textContent = src.getAttribute('data-label') || '';
+    svBars.innerHTML = pages.map(() => '<span class="sv__bar"><span></span></span>').join('');
+    lastSv = document.activeElement;
+    sv.hidden = false;
+    document.body.classList.add('no-scroll');
+    showPage(0);
+  }
+  function showPage(i) {
+    if (i >= pages.length) { closeStory(); return; }
+    if (i < 0) i = 0;
+    idx = i;
+    svStage.innerHTML = pages[i].outerHTML;
+    const bars = Array.from(svBars.children);
+    bars.forEach((b, k) => {
+      const f = b.firstElementChild;
+      f.style.transition = 'none';
+      f.style.width = k < i ? '100%' : '0%';
+    });
+    const cur = bars[i] && bars[i].firstElementChild;
+    if (cur) {
+      void cur.offsetWidth;
+      cur.style.transition = 'width ' + DUR + 'ms linear';
+      cur.style.width = '100%';
+    }
+    clearTimeout(timer);
+    timer = setTimeout(() => showPage(i + 1), DUR);
+  }
+  function closeStory() {
+    if (!sv || sv.hidden) return;
+    clearTimeout(timer);
+    sv.hidden = true;
+    document.body.classList.remove('no-scroll');
+    svStage.innerHTML = '';
+    if (lastSv && lastSv.focus) lastSv.focus();
+  }
+
+  document.querySelectorAll('[data-story]').forEach((el) => {
+    el.addEventListener('click', () => openStory(el.getAttribute('data-story')));
+  });
+  document.getElementById('svNext')?.addEventListener('click', () => showPage(idx + 1));
+  document.getElementById('svPrev')?.addEventListener('click', () => showPage(idx - 1));
+  sv?.querySelectorAll('[data-svclose]').forEach((el) => el.addEventListener('click', closeStory));
+  document.addEventListener('keydown', (e) => {
+    if (!sv || sv.hidden) return;
+    if (e.key === 'Escape') closeStory();
+    else if (e.key === 'ArrowRight') showPage(idx + 1);
+    else if (e.key === 'ArrowLeft') showPage(idx - 1);
+  });
+
   /* 연도 */
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
