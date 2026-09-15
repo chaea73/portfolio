@@ -171,14 +171,36 @@ b { font-weight: 600; }
 .story::-webkit-scrollbar { display: none; }
 .story__item { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: none; }
 .story__ring {
-  width: 77px; height: 77px; border-radius: 50%;
+  width: 77px; height: 77px; border-radius: 50%; padding: 3px;
+  background: var(--ig);
   display: grid; place-items: center;
-  background: var(--elev); border: 1px solid var(--line);
   transition: transform .15s ease;
 }
 .story__item:hover .story__ring { transform: scale(1.04); }
-.story__emoji { font-size: 1.9rem; line-height: 1; }
+.story__disc {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: var(--bg); display: grid; place-items: center;
+}
+.story__disc svg { width: 33px; height: 33px; fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .story__label { font-size: .78rem; font-weight: 600; color: var(--ink); }
+
+/* 목록(둘러보기·알림) */
+.menu { margin-top: 8px; display: grid; gap: 3px; }
+.menu > li > button {
+  width: 100%; display: flex; align-items: center; gap: 12px;
+  padding: 8px; border-radius: 12px; text-align: left;
+  transition: background-color .15s ease;
+}
+.menu > li > button:hover { background: var(--elev); }
+.menu__thumb {
+  width: 46px; height: 46px; border-radius: 10px; flex: none;
+  background: #0d1220 center/cover no-repeat; border: 1px solid var(--line);
+}
+.menu__txt { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.menu__txt b { font-size: .92rem; font-weight: 600; }
+.menu__txt span { font-size: .78rem; color: var(--ink-3); }
+.menu__go { color: var(--ink-3); font-size: 1.05rem; flex: none; }
+.menu--plain > li > button { padding: 12px 10px; }
 
 /* ── 탭바 ── */
 .tabs {

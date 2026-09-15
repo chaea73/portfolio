@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=JetBrains+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=13">
+<link rel="stylesheet" href="assets/css/style.css?v=14">
 </head>
 
 <body>
@@ -39,12 +39,12 @@
 
     <ul class="side__nav">
       <li><a href="#top" class="side__item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg><span>홈</span></a></li>
-      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>검색</span></button></li>
-      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"/></svg><span>탐색</span></button></li>
-      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="m9 8 5 4-5 4z" fill="currentColor" stroke="none"/></svg><span>릴스</span></button></li>
-      <li><a href="mailto:qkr.chaea73@gmail.com" class="side__item"><span class="side__badge">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 11 14"/><path d="M22 3 15 22l-4-8-8-4z"/></svg><span>메시지</span></a></li>
-      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.2-8.8 10.4-8.8 10.4S3.2 13.8 3.2 8.6A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 8.8 2.6z"/></svg><span>알림</span></button></li>
-      <li><button class="side__item" type="button" data-scrolltop><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M12 8v8M8 12h8"/></svg><span>만들기</span></button></li>
+      <li><button class="side__item" type="button" data-post="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>검색</span></button></li>
+      <li><button class="side__item" type="button" data-post="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"/></svg><span>탐색</span></button></li>
+      <li><button class="side__item" type="button" data-post="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="m9 8 5 4-5 4z" fill="currentColor" stroke="none"/></svg><span>릴스</span></button></li>
+      <li><button class="side__item" type="button" data-post="contact"><span class="side__badge">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 11 14"/><path d="M22 3 15 22l-4-8-8-4z"/></svg><span>메시지</span></button></li>
+      <li><button class="side__item" type="button" data-post="alerts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.6c0 5.2-8.8 10.4-8.8 10.4S3.2 13.8 3.2 8.6A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 8.8 2.6z"/></svg><span>알림</span></button></li>
+      <li><button class="side__item" type="button" data-post="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M12 8v8M8 12h8"/></svg><span>만들기</span></button></li>
       <li><a href="#top" class="side__item side__item--profile"><span class="side__ava" aria-hidden="true"></span><span>프로필</span></a></li>
     </ul>
 
@@ -103,19 +103,24 @@
       <!-- 스토리 하이라이트 -->
       <nav class="story" aria-label="하이라이트">
         <button class="story__item" type="button" data-post="about">
-          <span class="story__ring"><span class="story__emoji">👋</span></span><span class="story__label">소개</span>
+          <span class="story__ring"><span class="story__disc"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20c0-4.2 3.4-6.5 7.5-6.5s7.5 2.3 7.5 6.5"/></svg></span></span>
+          <span class="story__label">소개</span>
         </button>
         <button class="story__item" type="button" data-post="career">
-          <span class="story__ring"><span class="story__emoji">🎓</span></span><span class="story__label">이력</span>
+          <span class="story__ring"><span class="story__disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9 12 5l9.5 4-9.5 4z"/><path d="M6.5 11v4.2c0 1.6 2.6 2.8 5.5 2.8s5.5-1.2 5.5-2.8V11"/><path d="M21.5 9v5"/></svg></span></span>
+          <span class="story__label">이력</span>
         </button>
         <button class="story__item" type="button" data-post="skills">
-          <span class="story__ring"><span class="story__emoji">🧩</span></span><span class="story__label">관심분야</span>
+          <span class="story__ring"><span class="story__disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.1 5.4L19.5 10l-4.6 2.2L12 18l-2.9-5.8L4.5 10l5.4-1.6z"/></svg></span></span>
+          <span class="story__label">관심분야</span>
         </button>
         <button class="story__item" type="button" data-post="sheets">
-          <span class="story__ring"><span class="story__emoji">📚</span></span><span class="story__label">진로학습</span>
+          <span class="story__ring"><span class="story__disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h9a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2z"/><path d="M16 6.5h1.5a2 2 0 0 1 2 2v11H9"/></svg></span></span>
+          <span class="story__label">진로학습</span>
         </button>
         <button class="story__item" type="button" data-post="contact">
-          <span class="story__ring"><span class="story__emoji">✉️</span></span><span class="story__label">연락처</span>
+          <span class="story__ring"><span class="story__disc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span></span>
+          <span class="story__label">연락처</span>
         </button>
       </nav>
 
@@ -189,6 +194,40 @@
 
 <!-- ═══════════ 게시물 데이터 (숨김 · 내용만 여기서 고치면 됩니다) ═══════════ -->
 <div class="posts-data" hidden aria-hidden="true">
+
+  <!-- ── 둘러보기 (검색·탐색·릴스·만들기) ── -->
+  <article id="data-menu" data-cat="둘러보기">
+    <h2 class="post__title">둘러보기</h2>
+    <p class="post__dim" style="margin-top:6px">항목을 누르면 자세히 볼 수 있어요.</p>
+    <p class="post__sub">프로젝트</p>
+    <ul class="menu">
+      <li><button type="button" data-post="pwn"><span class="menu__thumb" style="background-image:url('assets/img/pwn-helpme.svg')"></span><span class="menu__txt"><b>pwn..helpme</b><span>보안 · Layer7</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="safeway"><span class="menu__thumb" style="background-image:url('assets/img/safewaymap.svg')"></span><span class="menu__txt"><b>Safe Way Map</b><span>앱 · AI</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="kbo"><span class="menu__thumb" style="background-image:url('assets/img/kbo-schedule.svg')"></span><span class="menu__txt"><b>KBO 경기 일정 뷰어</b><span>데이터</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="taptak"><span class="menu__thumb" style="background-image:url('assets/img/taptak.svg')"></span><span class="menu__txt"><b>TAP TAK</b><span>접근성</span></span><span class="menu__go">→</span></button></li>
+    </ul>
+    <p class="post__sub">더 보기</p>
+    <ul class="menu menu--plain">
+      <li><button type="button" data-post="about"><span class="menu__txt"><b>소개</b></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="career"><span class="menu__txt"><b>이력</b></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="skills"><span class="menu__txt"><b>관심분야</b></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="sheets"><span class="menu__txt"><b>진로 학습</b></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="contact"><span class="menu__txt"><b>연락처</b></span><span class="menu__go">→</span></button></li>
+    </ul>
+  </article>
+
+  <!-- ── 알림 ── -->
+  <article id="data-alerts" data-cat="알림">
+    <h2 class="post__title">알림</h2>
+    <p class="post__sub">이번 주</p>
+    <ul class="menu menu--plain">
+      <li><button type="button" data-post="pwn"><span class="menu__txt"><b>pwn..helpme</b><span>게시물에 좋아요 128개가 눌렸어요</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="taptak"><span class="menu__txt"><b>TAP TAK</b><span>새 댓글 13개가 달렸어요</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="career"><span class="menu__txt"><b>Layer7</b><span>26기 활동이 이력에 추가되었어요</span></span><span class="menu__go">→</span></button></li>
+      <li><button type="button" data-post="contact"><span class="menu__txt"><b>연락 대기 중</b><span>메시지를 남겨 주세요 ✉️</span></span><span class="menu__go">→</span></button></li>
+    </ul>
+  </article>
+
 
   <article id="data-pwn" data-media="assets/img/pwn-helpme.svg" data-cat="보안 · Layer7 학기말 프로젝트" data-likes="128">
     <h2 class="post__title">pwn..helpme</h2>
@@ -318,6 +357,6 @@
 
 </div>
 
-<script src="assets/js/main.js?v=13"></script>
+<script src="assets/js/main.js?v=14"></script>
 </body>
 </html>

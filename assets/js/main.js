@@ -65,6 +65,11 @@
   document.querySelectorAll('[data-post]').forEach((el) => {
     el.addEventListener('click', () => open(el.getAttribute('data-post')));
   });
+  // 모달 안 목록(둘러보기·알림)에서 항목 클릭 → 해당 게시물 열기
+  body?.addEventListener('click', (e) => {
+    const t = e.target.closest('[data-post]');
+    if (t) open(t.getAttribute('data-post'));
+  });
   modal?.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', close));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 
