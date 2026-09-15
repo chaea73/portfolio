@@ -1,17 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" font-family="'Pretendard','Malgun Gothic',sans-serif">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="52%" r="52%">
-      <stop offset="0%" stop-color="#f4e3a1"/>
-      <stop offset="34%" stop-color="#8a7d54"/>
-      <stop offset="70%" stop-color="#2a3145"/>
-      <stop offset="100%" stop-color="#1b2233"/>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#5b6b8f"/>
+      <stop offset="45%" stop-color="#232c44"/>
+      <stop offset="100%" stop-color="#141a2b"/>
     </radialGradient>
-    <linearGradient id="arrow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fdf3d0"/>
-      <stop offset="100%" stop-color="#d8bf7e"/>
+    <linearGradient id="arr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf3d0"/>
+      <stop offset="1" stop-color="#d8bf7e"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="500" fill="#ffffff"/>
-  <rect x="270" y="120" width="260" height="260" rx="62" fill="url(#glow)"/>
-  <path d="M400 168 L470 330 L400 292 L330 330 Z" fill="url(#arrow)" stroke="#b99f5d" stroke-width="2" stroke-linejoin="round"/>
+  <rect width="600" height="600" fill="url(#glow)"/>
+  <!-- 경로 라인 -->
+  <path d="M120 470 Q220 430 250 340 T430 220" fill="none" stroke="#6ee7b7" stroke-width="6" stroke-linecap="round" opacity="0.55" stroke-dasharray="2 16"/>
+  <circle cx="120" cy="470" r="10" fill="#6ee7b7"/>
+  <!-- 네비 화살표 -->
+  <g transform="translate(300,250)">
+    <circle r="96" fill="#1b2233" opacity="0.5"/>
+    <path d="M0 -74 L54 78 L0 44 L-54 78 Z" fill="url(#arr)" stroke="#b99f5d" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <text x="300" y="452" fill="#ffffff" font-size="44" font-weight="800" text-anchor="middle" letter-spacing="-1">Safe Way Map</text>
+  <text x="300" y="490" fill="#ffd98a" font-size="20" text-anchor="middle" font-weight="600">안심 경로 추천 서비스</text>
+  <text x="300" y="524" fill="#9fb0c9" font-size="15" text-anchor="middle">Kotlin · Firebase · LLM · 공공데이터</text>
 </svg>

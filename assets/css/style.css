@@ -194,31 +194,24 @@ main { width: min(var(--wrap), 100% - 32px); margin-inline: auto; }
 /* ── 피드 그리드 ────────────────────────────────────────── */
 .grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 6px; padding: 22px 0 10px;
+  gap: 4px; padding: 20px 0 10px;
 }
 .tile {
   position: relative; aspect-ratio: 1 / 1; overflow: hidden;
-  background: #fff center/cover no-repeat;
-  background-image: var(--img);
-  border-radius: 4px; border: 1px solid var(--line);
+  background-color: #0d1220;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
 }
-.tile__cat {
-  position: absolute; top: 8px; left: 8px; z-index: 2;
-  font-family: var(--mono); font-size: .62rem; font-weight: 700;
-  color: #fff; background: rgba(0,0,0,.55);
-  padding: 3px 8px; border-radius: 999px;
-  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-}
+.tile__cat { display: none; }
 .tile__hover {
   position: absolute; inset: 0; z-index: 1;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
   text-align: center; padding: 12px;
-  background: rgba(0,0,0,.55); color: #fff;
-  opacity: 0; transition: opacity .25s ease;
+  background: rgba(0,0,0,.45); color: #fff;
+  opacity: 0; transition: opacity .2s ease;
 }
 .tile:hover .tile__hover, .tile:focus-visible .tile__hover { opacity: 1; }
 .tile__title { font-size: 1rem; font-weight: 700; }
-.tile__stat { font-size: .82rem; font-weight: 600; letter-spacing: .02em; }
+.tile__stat { font-size: .95rem; font-weight: 700; letter-spacing: .03em; }
 
 /* ── 푸터 ───────────────────────────────────────────────── */
 .foot {
@@ -251,11 +244,10 @@ main { width: min(var(--wrap), 100% - 32px); margin-inline: auto; }
 .modal__close:hover { background: rgba(0,0,0,.6); }
 
 .modal__media {
-  background: #f2f3f5 center/contain no-repeat;
+  background: #0d1220 center/cover no-repeat;
   border-right: 1px solid var(--line);
   min-height: 320px;
 }
-:root[data-theme="dark"] .modal__media { background-color: #0a0a0a; }
 
 .modal__panel { display: flex; flex-direction: column; min-height: 0; }
 .modal__head {
